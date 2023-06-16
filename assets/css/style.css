@@ -1888,3 +1888,25 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+.btn {
+  background-color: transparent;
+  border-radius: 25px;
+  padding-bottom: 8px; 
+  padding-top: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  width: 93;
+  height: 30px;
+  color: white;
+  /* padding: 6px 10px; */
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: #FFDB6E;
+  color: black;
+  border-color: #FFDB6E;
+}
