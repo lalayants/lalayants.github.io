@@ -36,7 +36,6 @@ for (let i = 0; i < formInputs.length; i++) {
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
-console.log(pages)
 
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
@@ -45,12 +44,10 @@ for (let i = 0; i < navigationLinks.length; i++) {
     for (let i = 0; i < pages.length; i++) {
       console.log(this.innerHTML.toLowerCase())
       if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        // console.log(this.innerHTML.toLowerCase())
         pages[i].classList.add("active");
         navigationLinks[i].classList.add("active");
         window.scrollTo(0, 0);
       } else {
-        // console.log('not ', this.innerHTML.toLowerCase())
         pages[i].classList.remove("active");
         navigationLinks[i].classList.remove("active");
       }
@@ -81,12 +78,12 @@ contact_form_button.addEventListener('click', function() {
     type: "POST",
     dataType: "xml",
     success: function () {
-      console.log('done');
+      console.log('done ajax');
     },
     error: function() {
-      console.log('not done');
+      console.log('not done ajax');
     }
   });
-  console.log('done');
+  console.log('done listener');
 
 });
