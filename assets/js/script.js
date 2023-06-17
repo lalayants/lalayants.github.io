@@ -79,11 +79,14 @@ contact_form_button.addEventListener('click', function() {
     dataType: "xml",
     success: function () {
       console.log('done ajax');
+      // window.alert("d");
     },
     error: function() {
       console.log('not done ajax');
+      // window.alert("n d");
     }
   });
+  setTimeout(1000);
   console.log('done listener');
 
 });
