@@ -80,10 +80,12 @@ contact_form_button.addEventListener('click', function() {
     success: function () {
       console.log('done ajax');
       // window.alert("d");
+      setTimeout(1000);
     },
     error: function() {
       console.log('not done ajax');
       // window.alert("n d");
+      setTimeout(1000);
     }
   });
   setTimeout(1000);
