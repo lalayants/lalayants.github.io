@@ -69,4 +69,24 @@ contact_form_button.addEventListener('click', function() {
   console.log(contact_form_name);
   console.log(contact_form_link);
   console.log(contact_form_text);
+  $.ajax({
+    url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdHBSRUfVIdCPNuVNj-qyrE0Slsis6wLwZ3O8-0LiL1aKKHlA/formResponse",
+      
+    //add your google form generated numbers below which are also the 'names' of your inputs     
+    data: {
+      "entry.2005620554": contact_form_name,
+      "entry.1045781291": contact_form_link,
+      "entry.1166974658": contact_form_text,
+    },
+    type: "POST",
+    dataType: "xml",
+    success: function () {
+      console.log('done');
+    },
+    error: function() {
+      console.log('not done');
+    }
+  });
+  console.log('done');
+
 });
