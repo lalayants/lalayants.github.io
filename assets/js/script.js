@@ -58,37 +58,29 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 // const blog_articles = document.querySelector("")
 const contact_form_button = document.getElementById("contact_form_button");
-contact_form_button.addEventListener('click', function() {
+contact_form_button.addEventListener('click', function () {
   const contact_form_name = document.querySelector("#contact_form_name").value;
   const contact_form_link = document.querySelector("#contact_form_link").value;
   const contact_form_text = document.querySelector("#contact_form_text").value;
-  // console.log(contact_form_name, contact_form_link, contact_form_text);
-  // console.log(contact_form_name);
-  // console.log(contact_form_link);
-  // console.log(contact_form_text);
-  $.ajax({
-    url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdHBSRUfVIdCPNuVNj-qyrE0Slsis6wLwZ3O8-0LiL1aKKHlA/formResponse",
-      
-    //add your google form generated numbers below which are also the 'names' of your inputs     
-    data: {
-      "entry.2005620554": contact_form_name,
-      "entry.1045781291": contact_form_link,
-      "entry.1166974658": contact_form_text,
-    },
-    type: "POST",
-    dataType: "xml",
-    success: function () {
-      console.log('done ajax');
-      window.alert("Thanks!");
-      setTimeout(1000);
-    },
-    error: function() {
-      console.log('Thanks!');
-      // window.alert("n d");
-      setTimeout(1000);
-    }
-  });
-  setTimeout(1000);
-  // console.log('done listener');
+  for (let i = 0; i < 10; i++) {
+    $.ajax({
+      url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdHBSRUfVIdCPNuVNj-qyrE0Slsis6wLwZ3O8-0LiL1aKKHlA/formResponse",
+
+      //add your google form generated numbers below which are also the 'names' of your inputs     
+      data: {
+        "entry.2005620554": contact_form_name,
+        "entry.1045781291": contact_form_link,
+        "entry.1166974658": contact_form_text,
+      },
+      type: "POST",
+      dataType: "xml",
+      success: function () {
+        window.alert("Thanks!");
+      },
+      error: function () {
+        console.log('Thanks!');
+      }
+    });
+  }
 
 });
