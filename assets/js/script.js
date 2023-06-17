@@ -36,7 +36,6 @@ for (let i = 0; i < formInputs.length; i++) {
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
-console.log(navigationLinks)
 console.log(pages)
 
 // add event to all nav link
@@ -44,11 +43,14 @@ for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
 
     for (let i = 0; i < pages.length; i++) {
+      console.log(this.innerHTML.toLowerCase())
       if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+        // console.log(this.innerHTML.toLowerCase())
         pages[i].classList.add("active");
         navigationLinks[i].classList.add("active");
         window.scrollTo(0, 0);
       } else {
+        // console.log('not ', this.innerHTML.toLowerCase())
         pages[i].classList.remove("active");
         navigationLinks[i].classList.remove("active");
       }
@@ -56,3 +58,15 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// const blog_articles = document.querySelector("")
+const contact_form_button = document.getElementById("contact_form_button");
+contact_form_button.addEventListener('click', function() {
+  const contact_form_name = document.querySelector("#contact_form_name").value;
+  const contact_form_link = document.querySelector("#contact_form_link").value;
+  const contact_form_text = document.querySelector("#contact_form_text").value;
+  // console.log(contact_form_name, contact_form_link, contact_form_text);
+  console.log(contact_form_name);
+  console.log(contact_form_link);
+  console.log(contact_form_text);
+});
