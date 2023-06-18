@@ -56,39 +56,71 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-// const blog_articles = document.querySelector("")
-const contact_form_button = document.getElementById("contact_form_button");
-contact_form_button.addEventListener('click', function () {
+function read_and_send() {
   const contact_form_name = document.querySelector("#contact_form_name").value;
   const contact_form_link = document.querySelector("#contact_form_link").value;
   const contact_form_text = document.querySelector("#contact_form_text").value;
-  let done = 0;
-  for (let i = 0; i < 10000; i++) {
-    $.ajax({
-      url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdHBSRUfVIdCPNuVNj-qyrE0Slsis6wLwZ3O8-0LiL1aKKHlA/formResponse",
+  $.ajax({
+    url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdHBSRUfVIdCPNuVNj-qyrE0Slsis6wLwZ3O8-0LiL1aKKHlA/formResponse",
 
-      //add your google form generated numbers below which are also the 'names' of your inputs     
-      data: {
-        "entry.2005620554": contact_form_name,
-        "entry.1045781291": contact_form_link,
-        "entry.1166974658": contact_form_text,
-      },
-      type: "POST",
-      dataType: "xml",
-      success: function () {
-        window.alert("Thanks!");
-        done = 1;
-      },
-      error: function () {
-        console.log('Thanks!');
-        done = 1;
-      }
-    });
+    //add your google form generated numbers below which are also the 'names' of your inputs     
+    data: {
+      "entry.2005620554": contact_form_name,
+      "entry.1045781291": contact_form_link,
+      "entry.1166974658": contact_form_text,
+    },
+    type: "POST",
+    dataType: "xml",
+    success: function () {
+      window.alert("Thanks!");
+      return true;
+    },
+    error: function () {
+      console.log('Thanks!');
+      return false;
+    }
+  });
+  return false;
+}
 
-    if (done === 1) {
+// const blog_articles = document.querySelector("")
+const contact_form_button = document.getElementById("contact_form_button");
+contact_form_button.addEventListener('click', function () {
+  for (let i = 0; i < 10; i++){
+    if (read_and_send()){
       break;
     }
   }
+  // const contact_form_name = document.querySelector("#contact_form_name").value;
+  // const contact_form_link = document.querySelector("#contact_form_link").value;
+  // const contact_form_text = document.querySelector("#contact_form_text").value;
+  // let done = 0;
+  // for (let i = 0; i < 10000; i++) {
+  //   $.ajax({
+  //     url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdHBSRUfVIdCPNuVNj-qyrE0Slsis6wLwZ3O8-0LiL1aKKHlA/formResponse",
+
+  //     //add your google form generated numbers below which are also the 'names' of your inputs     
+  //     data: {
+  //       "entry.2005620554": contact_form_name,
+  //       "entry.1045781291": contact_form_link,
+  //       "entry.1166974658": contact_form_text,
+  //     },
+  //     type: "POST",
+  //     dataType: "xml",
+  //     success: function () {
+  //       window.alert("Thanks!");
+  //       done = 1;
+  //     },
+  //     error: function () {
+  //       console.log('Thanks!');
+  //       done = 1;
+  //     }
+  //   });
+
+  //   if (done === 1) {
+  //     break;
+  //   }
+  // }
 
 
 });
