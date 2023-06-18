@@ -63,7 +63,7 @@ contact_form_button.addEventListener('click', function () {
   const contact_form_link = document.querySelector("#contact_form_link").value;
   const contact_form_text = document.querySelector("#contact_form_text").value;
   let done = 0;
-  for (let i = 0; i < 1000; i++) {
+  for (let i = 0; i < 10000; i++) {
     $.ajax({
       url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdHBSRUfVIdCPNuVNj-qyrE0Slsis6wLwZ3O8-0LiL1aKKHlA/formResponse",
 
