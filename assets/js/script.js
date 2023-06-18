@@ -62,7 +62,8 @@ contact_form_button.addEventListener('click', function () {
   const contact_form_name = document.querySelector("#contact_form_name").value;
   const contact_form_link = document.querySelector("#contact_form_link").value;
   const contact_form_text = document.querySelector("#contact_form_text").value;
-  for (let i = 0; i < 10; i++) {
+  let done = 0;
+  for (let i = 0; i < 1000; i++) {
     $.ajax({
       url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdHBSRUfVIdCPNuVNj-qyrE0Slsis6wLwZ3O8-0LiL1aKKHlA/formResponse",
 
@@ -76,11 +77,18 @@ contact_form_button.addEventListener('click', function () {
       dataType: "xml",
       success: function () {
         window.alert("Thanks!");
+        done = 1;
       },
       error: function () {
         console.log('Thanks!');
+        done = 1;
       }
     });
+
+    if (done === 1) {
+      break;
+    }
   }
+
 
 });
