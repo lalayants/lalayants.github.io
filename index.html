@@ -48,15 +48,27 @@
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Kirill Lalayants">Kirill Lalayants</h1>
+          <h1 class="name" title="Kirill Lalayants">
+            <span class="eng active">Kirill Lalayants</span>
+            <span class="rus">Кирилл Лалаянц</span>
+          </h1>
 
-          <p class="title">Robotics engineer</p>
+          <p class="title">
+            <span class="eng active">Robotics engineer</span>
+            <span class="rus">Программист-робототехник</span>
+          </p>
 
-          <p class="title">ML engineer</p>
+          <p class="title">
+            <span class="eng active">ML engineer</span>
+            <span class="rus">ML разработчик</span>
+          </p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+          <!-- <span> -->
+            <span class="eng active">Show Contacts</span>
+            <span class="rus">Контакты</span>
+          <!-- </span> -->
 
           <ion-icon name="chevron-down"></ion-icon>
         </button>
@@ -78,7 +90,7 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:richard@example.com" class="contact-link">lalayantskirill@gmail.com</a>
+              <a href="mailto:lalayantskirill@gmail.com" class="contact-link">lalayantskirill@gmail.com</a>
             </div>
 
           </li>
@@ -90,7 +102,7 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">TELEGRAM</p>
+              <p class="contact-title">Telegram</p>
 
               <a href="https://t.me/kirill_lalayants" target=”_blank” class="contact-link">@kirill_lalayants</a>
             </div>
@@ -104,9 +116,15 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Birthday</p>
+              <p class="contact-title">
+                <span class="eng active">Birthday</span>
+                <span class="rus">Дата рождения</span>
+              </p>
 
-              <time datetime="1982-06-23">January 9, 2003</time>
+              <time datetime="1982-06-23">
+                <span class="eng active">January 9, 2003</span>
+                <span class="rus">9 Января, 2003</span>
+              </time>
             </div>
 
           </li>
@@ -118,9 +136,15 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Location</p>
+              <p class="contact-title">
+                <span class="eng active">Location</span>
+                <span class="rus">Местонахождение</span>
+              </p>
 
-              <address>St Petersburg, Russia</address>
+              <address>
+                <span class="eng active">St Petersburg, Russia</span>
+                <span class="rus">Санкт-Петербург</span>
+              </address>
             </div>
 
           </li>
@@ -184,13 +208,20 @@
           <!-- <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Portfolio</button>
           </li> -->
-          
+
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Portfolio</button>
           </li>
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="lang-button">
+              <span class="eng active"><img src="./assets/images/rus_flag.jpeg" alt="RUS flag" width="20"></span>
+              <span class="rus"><img src="./assets/images/eng_flag.png" alt="US flag" width="20"></span>
+            </button>
           </li>
 
         </ul>
@@ -578,7 +609,8 @@
                   <h3 class="h3 blog-item-title">VINS Docker</h3>
 
                   <p class="blog-text">
-                    Personal docker setup for VINS. Faced some problems with their default one, so made our own. In collaboration with mu collegue. Used in our lab work with Unitree a1.
+                    Personal docker setup for VINS. Faced some problems with their default one, so made our own. In
+                    collaboration with mu collegue. Used in our lab work with Unitree a1.
                   </p>
 
                 </div>
@@ -606,7 +638,8 @@
                   <h3 class="h3 blog-item-title">ROS Docker</h3>
 
                   <p class="blog-text">
-                    Personal docker setup for ROS. Convenient by passing environment variables into the script to build different versions.
+                    Personal docker setup for ROS. Convenient by passing environment variables into the script to build
+                    different versions.
                   </p>
 
                 </div>
@@ -618,7 +651,7 @@
 
         </section>
 
-        
+
 
       </article>
 
@@ -651,12 +684,15 @@
           <form action="#" class="form" data-form>
 
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" id="contact_form_name" required data-form-input>
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" id="contact_form_name"
+                required data-form-input>
 
-              <input type="text" name="email" class="form-input" placeholder="Email/Social Media" id="contact_form_link" required data-form-input>
+              <input type="text" name="email" class="form-input" placeholder="Email/Social Media" id="contact_form_link"
+                required data-form-input>
             </div>
             <div>
-            <textarea name="message" class="form-input" placeholder="Your Message" id="contact_form_text" required data-form-input></textarea>
+              <textarea name="message" class="form-input" placeholder="Your Message" id="contact_form_text" required
+                data-form-input></textarea>
             </div>
             <button class="form-btn" type="submit" id='contact_form_button' data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>

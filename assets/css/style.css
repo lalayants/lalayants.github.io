@@ -388,7 +388,10 @@ main {
 .info_more-btn:hover::before,
 .info_more-btn:focus::before { background: var(--bg-gradient-yellow-2); }
 
-.info_more-btn span { display: none; }
+.info_more-btn .eng  { display: none; }
+.info_more-btn .eng.active { display: none; }
+.info_more-btn .rus { display: none; }
+.info_more-btn .rus.active { display: none; }
 
 .sidebar-info_more {
   opacity: 0;
@@ -479,7 +482,7 @@ main {
   padding: 0 10px;
 }
 
-.navbar-link {
+.navbar-link, .lang-button {
   color: var(--light-gray);
   font-size: var(--fs-8);
   padding: 20px 7px;
@@ -1356,10 +1359,31 @@ textarea.form-input::-webkit-resizer { display: none; }
     padding: 10px 15px;
   }
 
-  .info_more-btn span {
+  /* .info_more-btn span {
+    display: block;
+    font-size: var(--fs-8);
+  } */
+  .info_more-btn .eng.active{
     display: block;
     font-size: var(--fs-8);
   }
+  .info_more-btn .eng{
+    display: none;
+    font-size: var(--fs-8);
+  }
+  .info_more-btn  .rus.active{
+    display: block;
+    font-size: var(--fs-8);
+  }
+  .info_more-btn .rus{
+    display: none;
+    font-size: var(--fs-8);
+  }
+  /* .info_more-btn .eng .rus{
+    display: none;
+    font-size: var(--fs-8);
+  } */
+
 
   .info_more-btn ion-icon { display: none; }
 
@@ -1382,7 +1406,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .navbar-list { gap: 20px; }
 
-  .navbar-link { --fs-8: 14px; }
+  .navbar-link, .lang-button { --fs-8: 14px; }
 
 
 
@@ -1581,7 +1605,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * NAVBAR
    */
 
-  .navbar-link { --fs-8: 15px; }
+  .navbar-link, .lang-button { --fs-8: 15px; }
 
 
 
@@ -1720,7 +1744,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     padding: 0 20px;
   }
 
-  .navbar-link { font-weight: var(--fw-500); }
+  .navbar-link,  { font-weight: var(--fw-500); }
 
 
 
@@ -1910,3 +1934,28 @@ textarea.form-input::-webkit-resizer { display: none; }
   color: black;
   border-color: #FFDB6E;
 }
+
+.eng{
+  /* visibility: hidden; */
+  display: none;
+}
+.eng.active{
+  /* visibility: visible; */
+  display:contents;
+}
+.rus{
+  /* visibility: hidden;
+   */
+   display: none;
+}
+.rus.active{
+  /* visibility: visible; */
+  display:contents;
+}
+
+/* .navbar-link {
+  color: var(--light-gray);
+  font-size: var(--fs-8);
+  padding: 20px 7px;
+  transition: color var(--transition-1);
+} */

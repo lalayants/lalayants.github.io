@@ -56,6 +56,8 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
+
+// contact form behavior
 function read_and_send() {
   const contact_form_name = document.querySelector("#contact_form_name").value;
   const contact_form_link = document.querySelector("#contact_form_link").value;
@@ -84,13 +86,32 @@ function read_and_send() {
   return false;
 }
 
-// const blog_articles = document.querySelector("")
 const contact_form_button = document.getElementById("contact_form_button");
 contact_form_button.addEventListener('click', function () {
-  for (let i = 0; i < 1; i++){
+  for (let i = 0; i < 1; i++) {
     // if (read_and_send()){
     //   break;
     // }
     read_and_send()
+  }
+});
+
+
+// language change behavior 
+const lang_button = document.querySelector(".lang-button");
+const rus_text = document.querySelectorAll(".rus");
+const eng_text = document.querySelectorAll(".eng.active");
+lang_button.addEventListener('click', function () {
+  console.log(this.innerHTML);
+  if (this.innerHTML.includes("eng active")) {
+    for (let i = 0; i < rus_text.length; i++) {
+      rus_text[i].classList.add('active');
+      eng_text[i].classList.remove('active')
+    }
+  } else {
+    for (let i = 0; i < rus_text.length; i++) {
+      rus_text[i].classList.remove('active');
+      eng_text[i].classList.add('active');
+    }
   }
 });
