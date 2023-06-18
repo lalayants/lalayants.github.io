@@ -115,7 +115,6 @@ const lang_button = document.querySelector(".lang-button");
 const rus_text = document.querySelectorAll(".rus");
 const eng_text = document.querySelectorAll(".eng.active");
 lang_button.addEventListener('click', function () {
-  console.log(this.innerHTML);
   if (this.innerHTML.includes("eng active")) {
     for (let i = 0; i < rus_text.length; i++) {
       rus_text[i].classList.add('active');
