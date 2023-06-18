@@ -42,8 +42,23 @@ for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
 
     for (let i = 0; i < pages.length; i++) {
-      console.log(this.innerHTML.toLowerCase())
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+      // console.log(this.innerHTML.toLowerCase());
+      // console.log(1);
+      let page_name = 1;
+      if (this.innerHTML.toLowerCase().includes('resume')){
+        page_name = "resume";
+      } else if (this.innerHTML.toLowerCase().includes('about')){
+        page_name = "about";
+      }
+      else if (this.innerHTML.toLowerCase().includes('portfolio')){
+        page_name = "portfolio";
+      }
+      else if (this.innerHTML.toLowerCase().includes('contact')){
+        page_name = "contact";
+      } else {
+        page_name = this.innerHTML.toLowerCase();
+      }
+      if (page_name === pages[i].dataset.page) {
         pages[i].classList.add("active");
         navigationLinks[i].classList.add("active");
         window.scrollTo(0, 0);
@@ -62,6 +77,7 @@ function read_and_send() {
   const contact_form_name = document.querySelector("#contact_form_name").value;
   const contact_form_link = document.querySelector("#contact_form_link").value;
   const contact_form_text = document.querySelector("#contact_form_text").value;
+  if (contact_form_button.length == 0 || contact_form_link.length == 0 || contact_form_text.length == 0) return;
   $.ajax({
     url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdHBSRUfVIdCPNuVNj-qyrE0Slsis6wLwZ3O8-0LiL1aKKHlA/formResponse",
 
@@ -89,9 +105,6 @@ function read_and_send() {
 const contact_form_button = document.getElementById("contact_form_button");
 contact_form_button.addEventListener('click', function () {
   for (let i = 0; i < 1; i++) {
-    // if (read_and_send()){
-    //   break;
-    // }
     read_and_send()
   }
 });
