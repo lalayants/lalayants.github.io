@@ -112,8 +112,8 @@ contact_form_button.addEventListener('click', function () {
 
 // language change behavior 
 const lang_button = document.querySelector(".lang-button");
-const rus_text = document.querySelectorAll(".rus");
-const eng_text = document.querySelectorAll(".eng.active");
+const rus_text = document.querySelectorAll(".rus.active");
+const eng_text = document.querySelectorAll(".eng");
 lang_button.addEventListener('click', function () {
   if (this.innerHTML.includes("eng active")) {
     for (let i = 0; i < rus_text.length; i++) {
