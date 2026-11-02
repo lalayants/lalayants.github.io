@@ -33,7 +33,7 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
                   'Инженер-исследователь',
                   ['С нуля разработал SLAM-систему для полётов БПЛА в помещениях без GPS: адаптировал '
                    'алгоритм и обеспечил 25 кадров/с на Jetson Xavier в реальных полётах.',
-                   'Реализовал safe RL для манипулятора в симуляции: достиг 95% успешных захватов и снизил '
+                   'Реализовал RL для манипулятора в симуляции: достиг 95% успешных захватов и снизил '
                    'число коллизий.',
                    'Разработал инструменты калибровки положения инструмента и камеры на реальном '
                    'манипуляторе; ошибка калибровки — менее 1 мм.',
@@ -86,11 +86,26 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
                            '/assets/documents/software-2023686859.pdf')],
         'institutions': 'РЭШ · Сколтех · ИТМО',
         'skills_title': 'Навыки',
-        'skills': [('ML и робототехника', 'RL, safe RL, computer vision, SLAM, ROS2'),
+        'skills': [('Machine Learning',
+                    'Reinforcement learning (SAC), computer vision, сегментация изображений и '
+                    'облаков точек, 6D pose estimation'),
                    ('Эконометрика и эксперименты',
-                    'A/B-тесты, DiD, uplift-модели, ценовая эластичность, временные ряды'),
-                   ('Количественные финансы', 'Оптимизация портфеля, asset pricing, VaR/CVaR'),
-                   ('Инструменты', 'Python, SQL, Pandas, NumPy, SciPy, Jupyter, Git, Docker')]},
+                    'A/B-тесты, DiD, uplift-модели, оценка ценовой эластичности, эконометрика временных '
+                    'рядов, панельные данные'),
+                   ('Количественные финансы',
+                    'Оптимизация портфеля, asset pricing, CAPM и факторные модели, моделирование рисков, '
+                    'VaR/CVaR, дюрация и анализ облигаций'),
+                   ('Данные и аналитика',
+                    'Python, SQL, Pandas, NumPy, SciPy, Jupyter, Spark, Hadoop, Presto'),
+                   ('Инженерные инструменты',
+                    'Git, Docker, автоматизация конфигов и экспериментов, пайплайны сбора событий и расчёта '
+                    'метрик, аналитические дашборды'),
+                   ('Робототехника',
+                    'ROS2, SLAM, RGB-D и облака точек, оценка плоскостей, калибровка инструментов и камер, '
+                    'MuJoCo, Gazebo, PyBullet, NVIDIA Jetson Xavier'),
+                   ('Руководство проектами',
+                    'Подбор команды, roadmap, согласование технических решений, организация испытаний, '
+                    'взаимодействие с заказчиком')]},
  'en': {'name': 'Kirill Lalayants',
         'other': 'RU',
         'other_lang': 'ru',
@@ -118,7 +133,7 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
                   'Research Engineer',
                   ['Built a SLAM system from scratch for GPS-denied indoor UAV flights: adapted the '
                    'algorithm and achieved 25 FPS on Jetson Xavier in real-world flights.',
-                   'Implemented safe RL for a manipulator in simulation, achieving a 95% grasp success rate '
+                   'Implemented RL for a manipulator in simulation, achieving a 95% grasp success rate '
                    'and reducing collisions.',
                    'Developed tools to calibrate tool and camera poses on a real manipulator, with errors '
                    'below 1 mm.',
@@ -168,11 +183,25 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
                            '/assets/documents/software-2023686859.pdf')],
         'institutions': 'NES · Skoltech · ITMO',
         'skills_title': 'Skills',
-        'skills': [('ML & robotics', 'RL, safe RL, computer vision, SLAM, ROS2'),
+        'skills': [('Machine Learning',
+                    'Reinforcement learning (SAC), computer vision, image and point-cloud '
+                    'segmentation, 6D pose estimation'),
                    ('Econometrics & experiments',
-                    'A/B testing, DiD, uplift modeling, price elasticity, time series'),
-                   ('Quantitative finance', 'Portfolio optimization, asset pricing, VaR/CVaR'),
-                   ('Tools', 'Python, SQL, Pandas, NumPy, SciPy, Jupyter, Git, Docker')]}}
+                    'A/B testing, DiD, uplift modeling, price elasticity estimation, time series '
+                    'econometrics, panel data'),
+                   ('Quantitative finance',
+                    'Portfolio optimization, asset pricing, CAPM and factor models, risk modeling, VaR/CVaR, '
+                    'duration and fixed income analysis'),
+                   ('Data & analytics', 'Python, SQL, Pandas, NumPy, SciPy, Jupyter, Spark, Hadoop, Presto'),
+                   ('Engineering tools',
+                    'Git, Docker, configuration and experiment automation, event logging and metric '
+                    'pipelines, analytical dashboards'),
+                   ('Robotics',
+                    'ROS2, SLAM, RGB-D and point clouds, plane estimation, tool and camera calibration, '
+                    'MuJoCo, Gazebo, PyBullet, NVIDIA Jetson Xavier'),
+                   ('Project leadership',
+                    'Team formation, roadmapping, technical decision review, test coordination, client '
+                    'communication')]}}
 
 def render(lang, c):
     route = '/' if lang == 'en' else '/ru/'
