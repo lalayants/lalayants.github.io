@@ -9,8 +9,8 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'other': 'EN',
         'other_lang': 'en',
         'title': 'Кирилл Лалаянц — Data Scientist · ML и финансы',
-        'desc': 'Кирилл Лалаянц — Data Scientist. ML для трейдинга и ценообразования; +5% Front Margin в '
-                'Яндекс Лавке. РЭШ, Сколтех, ИТМО.',
+        'desc': 'Кирилл Лалаянц — Data Scientist в Сбер КИБ. ML для трейдинга и ценообразования, опыт в '
+                'Яндекс Лавке, робототехнике и руководстве R&D-проектом. РЭШ, Сколтех, ИТМО.',
         'skip': 'К содержанию',
         'pdf': 'r',
         'jobs': [('05.2026 — сейчас',
@@ -64,8 +64,10 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'updated': 'Обновлено в ноябре 2026 года',
         'other_url': '/',
         'nav': ['Опыт', 'Навыки', 'Образование', 'Контакты'],
-        'intro': 'Оптимизировал скидки в Яндекс Лавке (+5% Front Margin) и сократил подготовку экспериментов '
-                 'с нескольких часов до нескольких минут.',
+        'intro': 'Работаю Data Scientist в Сбер КИБ: применяю ML к задачам трейдинга и ценообразования. В '
+                 'Яндекс Лавке оптимизировал скидки (+5% Front Margin) и автоматизировал подготовку '
+                 'экспериментов. Ранее разрабатывал SLAM и компьютерное зрение для БПЛА и манипуляторов в '
+                 'ИТМО и руководил R&D-командой — от её подбора до передачи прототипа заказчику.',
         'cv': 'Резюме (PDF)',
         'experience_title': 'Опыт работы',
         'education_title': 'Образование',
@@ -93,8 +95,8 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'other': 'RU',
         'other_lang': 'ru',
         'title': 'Kirill Lalayants — Data Scientist · ML & Finance',
-        'desc': 'Kirill Lalayants — Data Scientist. ML for trading and pricing; increased Front Margin by 5% '
-                'at Yandex Lavka. NES, Skoltech, ITMO.',
+        'desc': 'Kirill Lalayants — Data Scientist at Sberbank CIB. ML for trading and pricing, experience '
+                'at Yandex Lavka, robotics and R&D team leadership. NES, Skoltech, ITMO.',
         'skip': 'Skip to content',
         'pdf': 'e',
         'jobs': [('May 2026 — present',
@@ -145,8 +147,10 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'updated': 'Updated November 2026',
         'other_url': '/ru/',
         'nav': ['Experience', 'Skills', 'Education', 'Contact'],
-        'intro': 'Increased Front Margin by 5% at Yandex Lavka through discount optimization and reduced '
-                 'experiment setup time from hours to minutes.',
+        'intro': 'I’m a Data Scientist at Sberbank CIB, applying ML to trading and pricing. At Yandex Lavka, '
+                 'I optimized discounts (+5% Front Margin) and automated experiment setup. Previously, I '
+                 'developed SLAM and computer vision systems for UAVs and manipulators at ITMO and led an '
+                 'R&D project from team formation to prototype delivery.',
         'cv': 'CV (PDF)',
         'experience_title': 'Experience',
         'education_title': 'Education',
