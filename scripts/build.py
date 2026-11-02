@@ -20,7 +20,7 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
                    'деска.']),
                  ('01.2026 — 05.2026',
                   'Яндекс Лавка',
-                  'Data Scientist',
+                  'Data Analyst',
                   ['Оптимизировал размеры скидок на основе оценки ценовой эластичности: +5% Front Margin, '
                    'подтверждено масштабным A/B-тестом.',
                    'Автоматизировал процесс заведения и согласования экспериментов: сократил время '
@@ -121,7 +121,7 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
                   ['Develop and implement RL agents for pricing and trading desk optimization.']),
                  ('Jan 2026 — May 2026',
                   'Yandex Lavka',
-                  'Data Scientist',
+                  'Data Analyst',
                   ['Optimized discount levels using price elasticity estimates, increasing Front Margin by '
                    '5%, as confirmed by a large-scale A/B test.',
                    'Automated experiment setup and approval, reducing preparation time from several hours to '
