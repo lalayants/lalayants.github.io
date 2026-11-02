@@ -31,12 +31,15 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
                  ('07.2022 — 06.2025',
                   'Университет ИТМО',
                   'Инженер-исследователь',
-                  ['Работал над проектами по ML, компьютерному зрению и робототехнике в лаборатории '
-                   'адаптивных и нелинейных систем управления.',
-                   'Разработал и внедрил SLAM-систему для БПЛА, работающую с частотой 25 кадров/с на NVIDIA '
-                   'Jetson Xavier.',
-                   'Реализовал safe RL для управления манипулятором: доля успешных захватов — 95%, ошибка '
-                   'калибровки инструмента — менее 1 мм.']),
+                  ['С нуля разработал SLAM-систему для полётов БПЛА в помещениях без GPS: адаптировал '
+                   'алгоритм и обеспечил 25 кадров/с на Jetson Xavier в реальных полётах.',
+                   'Реализовал safe RL для манипулятора в симуляции: достиг 95% успешных захватов и снизил '
+                   'число коллизий.',
+                   'Разработал инструменты калибровки положения инструмента и камеры на реальном '
+                   'манипуляторе; ошибка калибровки — менее 1 мм.',
+                   'Разработал сегментацию розетки по RGB-D облаку точек, расчёт плоскостей и расстояний в '
+                   'системе координат робота; решение использовалось для автоматического подключения разъёма '
+                   'на реальном манипуляторе.']),
                  ('12.2023 — 07.2024',
                   'Проект BRIZ',
                   'Руководитель команды',
@@ -105,11 +108,15 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
                  ('Jul 2022 — Jun 2025',
                   'ITMO University',
                   'Research Engineer',
-                  ['Worked on ML, computer vision and robotics projects at the Adaptive and Nonlinear '
-                   'Control Systems Lab.',
-                   'Developed and deployed a UAV SLAM system running at 25 FPS on NVIDIA Jetson Xavier.',
-                   'Implemented safe RL for robotic manipulation, achieving a 95% grasp success rate and a '
-                   'tool calibration error of less than 1 mm.']),
+                  ['Built a SLAM system from scratch for GPS-denied indoor UAV flights: adapted the '
+                   'algorithm and achieved 25 FPS on Jetson Xavier in real-world flights.',
+                   'Implemented safe RL for a manipulator in simulation, achieving a 95% grasp success rate '
+                   'and reducing collisions.',
+                   'Developed tools to calibrate tool and camera poses on a real manipulator, with errors '
+                   'below 1 mm.',
+                   'Developed socket segmentation from RGB-D point clouds, plane estimation and distance '
+                   'calculations in the robot coordinate frame; the system was used for automated connector '
+                   'insertion on a real manipulator.']),
                  ('Dec 2023 — Jul 2024',
                   'BRIZ Project',
                   'Team Lead',
