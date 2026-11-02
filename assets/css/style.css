@@ -31,7 +31,7 @@ h2 { font-size: 19px; line-height: 1.4; font-weight: 600; margin-bottom: 25px; }
 h3 { font-size: 16px; font-weight: 600; line-height: 1.6; }
 p + p { margin-top: 15px; }
 .about { padding-top: 36px; }
-.occupation { color: var(--muted); margin: 10px 0 27px; font-size: 16px; }
+.occupation { color: var(--muted); margin: 10px 0 4px; font-size: 16px; }
 .profile-links { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 25px; font-size: 14px; }
 main > section { padding-bottom: 43px; margin-bottom: 37px; border-bottom: 1px solid var(--line); }
 main > section:last-child { margin-bottom: 0; }
@@ -65,7 +65,7 @@ footer a { color: var(--muted); text-decoration: none; }
   .language { padding-left: 15px; }
   .about { padding-top: 22px; }
   h1 { font-size: 39px; letter-spacing: -1.2px; }
-  .occupation { margin-bottom: 22px; }
+  .occupation { margin-bottom: 4px; }
   .entry-heading { flex-direction: column; gap: 1px; }
   .role { margin-top: 4px; }
   main > section { padding-bottom: 33px; margin-bottom: 30px; }
@@ -105,3 +105,5 @@ footer a { color: var(--muted); text-decoration: none; }
   nav { gap: 16px; flex-wrap: wrap; }
   .skills-list > div { grid-template-columns: 1fr; gap: 4px; }
 }
+
+.about .institutions { margin: 0 0 24px; }
