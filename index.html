@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kirill Lalayants</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/avatar-me.png" alt="Kirill Lalayants" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Kirill Lalayants">
+            <span class="eng">Kirill Lalayants</span>
+            <span class="rus active">Кирилл Лалаянц</span>
+          </h1>
+
+          <p class="title">
+            <span class="eng">Robotics engineer</span>
+            <span class="rus active">Программист-робототехник</span>
+          </p>
+
+          <p class="title">
+            <span class="eng">ML engineer</span>
+            <span class="rus active">ML разработчик</span>
+          </p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <!-- <span> -->
+          <span class="eng">Show Contacts</span>
+          <span class="rus active">Контакты</span>
+          <!-- </span> -->
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:lalayantskirill@gmail.com" class="contact-link">lalayantskirill@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Telegram</p>
+
+              <a href="https://t.me/kirill_lalayants" target=”_blank” class="contact-link">@kirill_lalayants</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">
+                <span class="eng">Birthday</span>
+                <span class="rus active">Дата рождения</span>
+              </p>
+
+              <time datetime="1982-06-23">
+                <span class="eng">January 9, 2003</span>
+                <span class="rus active">09.01.2003</span>
+              </time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">
+                <span class="eng">Location</span>
+                <span class="rus active">Местонахождение</span>
+              </p>
+
+              <address>
+                <span class="eng">St Petersburg, Russia</span>
+                <span class="rus active">Санкт-Петербург</span>
+              </address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <!-- <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div> -->
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>
+              <span class="eng">About</span>
+              <span class="rus active">Обо мне</span>
+            </button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>
+              <span class="eng">Resume</span>
+              <span class="rus active">Резюме</span>
+            </button>
+          </li>
+
+          <!-- <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li> -->
+
+          <!-- <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>
+              <span class="eng">Portfolio</span>
+              <span class="rus active">Портфолио</span>
+            </button>
+          </li> -->
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>
+              <span class="eng">Contact</span>
+              <span class="rus active">Связаться</span>
+            </button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="lang-button">
+              <span class="eng"><img src="./assets/images/rus_flag.jpeg" alt="RUS flag" width="20"></span>
+              <span class="rus active"><img src="./assets/images/eng_flag.png" alt="US flag" width="20"></span>
+            </button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">
+            <span class="eng">
+              About Me
+            </span>
+            <span class="rus active">
+              Обо мне
+            </span>
+          </h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            <span class="eng">
+              I’m an ML and Robotics engineer from Saint Petersburg, Russia, currently studying at ITMO University. I
+              specialize in designing intelligent, cutting-edge systems.
+            </span>
+            <span class="rus active">
+              Робототехник из Санкт-Петербурга. Получил звания бакалавра в университете ИТМО по About Me "Робототехника
+              и ИИ".
+              Специализируюсь на разработке интеллектуальных киберфизических систем.
+            </span>
+          </p>
+
+          <p>
+            <span class="eng">
+              Driven by a passion for innovation, my goal is to bring your vision to life with smart, tailored
+              solutions. I merge robotics and artificial intelligence, seamlessly integrating hardware and software to
+              create robots that perceive, learn, and adapt.
+            </span>
+            <span class="rus active">
+              Вдохновлён стремлением к инновациям, моя цель — воплотить ваше видение в жизнь с помощью умных и
+              индивидуальных решений. Я объединяю робототехнику и искусственный интеллект, бесшовно сочетая аппаратное и
+              программное обеспечение для создания роботов, которые воспринимают, обучаются и адаптируются.
+            </span>
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">
+            <span class="eng">What I'm Doing</span>
+            <span class="rus active">Чем я занимаюсь</span>
+          </h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/cv.png" alt="CV icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">
+                  <span class="eng">Computer Vision</span>
+                  <span class="rus active">Компьютерное зрение</span>
+                </h4>
+                <p class="service-item-text">
+                  <span class="eng">I develop professional-grade computer vision systems tailored to a wide range of
+                    applications.</span>
+                  <span class="rus active">Разрабатываю профессиональные системы компьютерного зрения, адаптированные
+                    для различных задач.</span>
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/nn.png" alt="ML icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">
+                  <span class="eng">Machine Learning</span>
+                  <span class="rus active">Машинное обучение</span>
+                </h4>
+                <p class="service-item-text">
+                  <span class="eng">Leveraging data-driven insights to build intelligent, adaptive machine learning
+                    solutions.</span>
+                  <span class="rus active">Использую анализ данных для разработки интеллектуальных и адаптивных
+                    ML-решений.</span>
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/robot.png" alt="Robotics icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">
+                  <span class="eng">Robotics</span>
+                  <span class="rus active">Робототехника</span>
+                </h4>
+                <p class="service-item-text">
+                  <span class="eng">Specializing in robotic automation and intelligent system design.</span>
+                  <span class="rus active">Специализируюсь на автоматизации и разработке интеллектуальных
+                    робототехнических систем.</span>
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/docker.png" alt="Docker icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">
+                  <span class="eng">Docker</span>
+                  <span class="rus active">Docker</span>
+                </h4>
+                <p class="service-item-text">
+                  <span class="eng">Expert in Docker containerization to streamline deployment and development
+                    workflows.</span>
+                  <span class="rus active">Эксперт в контейнеризации Docker для оптимизации процессов развертывания и
+                    разработки.</span>
+                </p>
+              </div>
+            </li>
+
+          </ul>
+
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">
+            <!-- Resume -->
+            <span class="eng">Resume
+              <a href="assets/cvs/Lalayants_cv_e.pdf" target=”_blank” download>
+                <button class="btn" type="button">
+                  <i class="fa fa-download"></i>
+                  Download
+                </button>
+              </a>
+            </span>
+            <span class="rus active">Резюме
+              <a href="assets/cvs/Lalayants_cv_r.pdf" target=”_blank” download>
+                <button class="btn" type="button">
+                  <i class="fa fa-download"></i>
+                  Скачать
+                </button>
+              </a>
+            </span>
+            </form>
+          </h2>
+        </header>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">
+              <span class="eng">Education</span>
+              <span class="rus active">Образование</span>
+            </h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">
+                <span class="eng">ITMO University</span>
+                <span class="rus active">Университет ИТМО</span>
+              </h4>
+
+              <span class="date">2021 — 2025</span>
+
+              <p class="timeline-text">
+                <span class="eng">Studying for my bachelor's degree in Robotics and AI.</span>
+                <span class="rus active">Бакалавр по направлению "Робототехника и искусственный интеллект".</span>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">
+                <span class="eng">TOEFL IBT</span>
+                <span class="rus active">TOEFL IBT</span>
+              </h4>
+
+              <span class="date">06.2024</span>
+
+              <p class="timeline-text">
+                <span class="eng">106/120 — C1 Advanced</span>
+                <span class="rus active">106/120 — C1 Advanced</span>
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">
+              <span class="eng">Experience</span>
+              <span class="rus active">Опыт</span>
+            </h3>
+          </div>
+
+          <ol class="timeline-list">
+            <!-- Lab Membership -->
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                <span class="eng">Nonlinear & Adaptive Control Systems Lab Member</span>
+                <span class="rus active">Работник лаборатории «Нелинейные и адаптивные системы управления»</span>
+              </h4>
+              <span class="date">
+                <span class="eng">July 2022 – May 2025</span>
+                <span class="rus active">Июль 2022 – Май 2025</span>
+              </span>
+              <p class="timeline-text">
+                <span class="eng">Contributed across ML, CV, ROS development and DevOps workflows on real-world robotics
+                  projects.</span>
+                <span class="rus active">Решал реальные задачи в рамках НИР для множества заказчиков. </span>
+              </p>
+            </li>
+
+            <!-- Internship at Geoscan -->
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">
+                <span class="eng">Internship @ Geoscan</span>
+                <span class="rus active">Стажировка в Geoscan</span>
+              </h4>
+              <span class="date">
+                <span class="eng">Dec 2022 – Mar 2023</span>
+                <span class="rus active">Дек 2022 – Мар 2023</span>
+              </span>
+              <p class="timeline-text">
+                <span class="eng">Developed a drone-based computer vision system to monitor crop germination.</span>
+                <span class="rus active">Разработал систему компьютерного зрения на базе дронов для мониторинга
+                  прорастания сельскохозяйственных культур.</span>
+              </p>
+            </li>
+
+            <!-- Aerial Robotics Project -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">
+                <span class="eng">Software Developer</span>
+                <span class="rus active">Программист разработчик </span>
+              </h4>
+
+              <span class="date">
+                <span class="eng">12.2023 - 07.2024</span>
+                <span class="rus active">12.2023 - 07.2024</span>
+              </span>
+
+              <p class="timeline-text">
+                <span class="eng">Solved numerous tasks for arial collaborative robotics applications.</span>
+                <span class="rus active">Решил множество задач коллаборативной воздушной робототехники в работе над
+                  коммерческим проектом.</span>
+              </p>
+            </li>
+
+            <!-- Конференции -->
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">
+                <span class="eng">Conference Speaker @ ITMO</span>
+                <span class="rus active">Докладчик на КМУ 2023</span>
+              </h4>
+
+              <span class="date">03.2023</span>
+
+              <p class="timeline-text">
+                <span class="eng">Spoke at the conference with the results of the internship.</span>
+                <span class="rus active">Представил на конференции в ИТМО разработанную на стажировке систему.</span>
+              </p>
+
+            </li>
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">
+                <span class="eng">Conference Speaker @ ITMO</span>
+                <span class="rus active">Докладчик на КМУ 2024</span>
+              </h4>
+
+              <span class="date">03.2024</span>
+
+              <p class="timeline-text">
+                <span class="eng">Presentation at the conference XIII Congress of Young Scientists of ITMO on the topic
+                  of application of diffusion models in robotics.</span>
+                <span class="rus active">Доклад на тему использования диффузионных нейронных систем в робототехнике на
+                  КМУ XIII ИТМО.</span>
+              </p>
+            </li>
+
+          
+<!-- 
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">
+                <span class="eng">DevOps in the Quadruped Related Project @ Lab</span>
+                <span class="rus active">DevOps в проекте с роботом-квадропедом</span>
+              </h4>
+
+              <span class="date">12.2022</span>
+
+              <p class="timeline-text">
+                <span class="eng">In my role, I have successfully utilized Docker to containerize and deploy
+                  applications, streamlining
+                  the development and deployment processes.</span>
+                <span class="rus active">В своей роли я успешно использовал Docker для контейнеризации приложений,
+                  оптимизируя
+                  процессы разработки и развертывания.</span>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">
+                <span class="eng">CV Engineer @ ITMO</span>
+                <span class="rus active">CV-инженер</span>
+              </h4>
+
+              <span class="date">04.2023</span>
+
+              <p class="timeline-text">
+                <span class="eng">Made a system to detect the right port using neural networks.</span>
+                <span class="rus active">Сделал систему для детектирования нужного разъема манипулятором для проекта в
+                  лаборатории.</span>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">
+                <span class="eng">SLAM Engineer @ Lab</span>
+                <span class="rus active">SLAM-инженер</span>
+              </h4>
+
+              <span class="date">
+                <span class="eng">05.2023 — 06.2023</span>
+                <span class="rus active">05.2023 - 06.2023</span>
+              </span>
+
+              <p class="timeline-text">
+                <span class="eng">Launched a visual odometry system for drones (VINS). Worked with the navigation
+                  stack, wrote wrappers for ROS, made a microserver architecture to run via docker compose</span>
+                <span class="rus active">Запускал систему визуальной одометрии для дронов(VINS). Работал с навигационным
+                  стэком, писал обертки для ROS, делал микросерверную архитектуру для запуска через docker
+                  compose.</span>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">
+                <span class="eng">CV Engineer @ Lab</span>
+                <span class="rus active">CV-инженер</span>
+              </h4>
+
+              <span class="date">
+                <span class="eng">07.2023 — 08.2023</span>
+                <span class="rus active">07.2023 - 08.2023</span>
+              </span>
+
+              <p class="timeline-text">
+                <span class="eng">Developed a system to receive and process a point cloud from an RGBD camera,
+                  for further processing and detection of the desired object, in order to obtain its position,
+                  orientation and subsequent switching. I also built a dataset and trained a neural network.</span>
+                <span class="rus active">Разрабатывал систему обработки облака точек с RGBD камеры для получения
+                  6D-положения и последующей коммутации манипулятора.</span>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">
+                <span class="eng">RL Engineer @ Lab</span>
+                <span class="rus active">RL-инженер</span>
+              </h4>
+
+              <span class="date">
+                <span class="eng">09.2023 — 12.2023</span>
+                <span class="rus active">09.2023 - 12.2023</span>
+              </span>
+
+              <p class="timeline-text">
+                <span class="eng">Developed environment and fine-tuned ATACOM for safe-rl manipulation</span>
+                <span class="rus active">Разработка окружения и обучение модели ATACOM для решения задач безопасной
+                  манипуляции в проекте с Сбером.</span>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">
+                <span class="eng">Starline Hackathon</span>
+                <span class="rus active">Хакатон StarLine</span>
+              </h4>
+
+              <span class="date">
+                <span class="eng">10.2023</span>
+                <span class="rus active">10.2023</span>
+              </span>
+
+              <p class="timeline-text">
+                <span class="eng">Winner of autonomous technologies hackathon.</span>
+                <span class="rus active">Победа в хакатоне по беспилотным технологиям.</span>
+              </p>
+
+            </li>
+          </ol>
+ -->
+        </section>
+
+        <!-- <section class="skill">
+
+          <h3 class="h3 skills-title">
+            <span class="eng">My Skills</span>
+            <span class="rus active">Мои навыки</span>
+          </h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">
+                  <span class="eng">Computer Vision</span>
+                  <span class="rus active">Компьютерное зрение</span>
+                </h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Docker</h5>
+                <data value="60">60%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">ROS</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">ML</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section> -->
+      </article>
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <!-- <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">
+            <span class="eng">Portfolio</span>
+            <span class="rus active">Портфолио</span>
+          </h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="https://github.com/ITMO449-ML-department/gui_wine" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/wine_field.png" alt="ITMO conferences in 2023" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">
+                      <span class="eng">Computer Vision</span>
+                      <span class="rus active">Компьютерное зрение</span>
+                    </p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2023-04-2">
+                      <span class="eng">Apr 04, 2023</span>
+                      <span class="rus active">04.04.2023</span>
+                    </time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">
+                    <span class="eng">Computer Vision System for Monitoring Crops</span>
+                    <span class="rus active">Система компьютерного зрения для мониторинга сельскохозяйственных культур</span>
+                  </h3>
+
+                  <p class="blog-text">
+                    <span class="eng">My computer vision system for monitoring crop germination using drone
+                      images developed during an
+                      internship at Geoscan. Shown at ITMO conference.</span>
+                    <span class="rus active">Моя система компьютерного зрения для мониторинга всходов сельскохозяйственных
+                      культур с помощью изображений, полученных с беспилотника, разработанная во время стажировки в
+                      компании Geoscan.
+                      стажировки в компании "Геоскан". Показана на конференции ИТМО.</span>
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="https://github.com/diuzhevVlad/vins_docker" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/vins.png" alt="VINS ROS" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Docker, ROS</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2023-10-06">
+                      <span class="eng">Jun 10, 2023</span>
+                      <span class="rus active">10.06.2023</span>
+                    </time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">VINS Docker</h3>
+
+                  <p class="blog-text">
+                    <span class="eng">Personal docker setup for VINS. Faced some problems with their default one,
+                      so made our own. In
+                      collaboration with my colleague. Used in our lab work with Unitree a1.</span>
+                    <span class="rus active">Персональный docker для VINS. Столкнулся с некоторыми проблемами с их стандартным,
+                      поэтому сделал свой собственный. Используется в нашей лабораторной работе с Unitree a1.</span>
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="https://github.com/lalayants/ros_docker" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/ros_docker.png" alt="ROS Docker" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Docker, ROS</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2023-17-06">Jun 17, 2023
+                      <span class="eng">Jun 17, 2023</span>
+                      <span class="rus active">17.06.2023</span>
+                    </time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">ROS Docker</h3>
+
+                  <p class="blog-text">
+                    <span class="eng">Personal docker setup for ROS. Convenient by passing environment variables
+                      into the script to build different versions.</span>
+                    <span class="rus active">Персональная настройка docker для ROS. Удобно передавать переменные окружения в
+                      скрипт для сборки различные версии.</span>
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+      </article> -->
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">
+            <span class="eng">Contact</span>
+            <span class="rus active">Связаться</span>
+          </h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255808.70677846705!2d29.765053023634966!3d59.94034692292539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696378cc74a65ed%3A0x6dc7673fab848eff!2sSt%20Petersburg!5e0!3m2!1sen!2sru!4v1686871649657!5m2!1sen!2sru"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">
+            <span class="eng">Contact Form</span>
+            <span class="rus active">Форма связи</span>
+          </h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full Name" id="contact_form_name"
+                required data-form-input>
+
+              <input type="text" name="email" class="form-input" placeholder="Email/Social Media" id="contact_form_link"
+                required data-form-input>
+            </div>
+            <div>
+              <textarea name="message" class="form-input" placeholder="Your Message" id="contact_form_text" required
+                data-form-input></textarea>
+            </div>
+            <button class="form-btn" type="submit" id='contact_form_button' data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>
+                <span class="eng">Send Message</span>
+                <span class="rus active">Отправить</span>
+              </span>
+            </button>
+            <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdHBSRUfVIdCPNuVNj-qyrE0Slsis6wLwZ3O8-0LiL1aKKHlA/viewform?embedded=true" width="640" height="685" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+
+          </form>
+
+        </section>
+
+      </article>
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
