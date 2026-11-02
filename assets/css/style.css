@@ -92,3 +92,16 @@ footer a { color: var(--muted); text-decoration: none; }
 .registration-meta, .registration-credit { color: var(--muted); font-size: 13px; }
 .registration-meta { margin-top: 6px; }
 .registration-credit { margin-top: 3px; }
+
+.institutions { font-size: 14px; color: var(--muted); }
+.institutions a { color: inherit; text-decoration: none; }
+.institutions a:hover { color: var(--link); text-decoration: underline; }
+.skills-list { margin: 0; }
+.skills-list > div { display: grid; grid-template-columns: 210px 1fr; gap: 24px; }
+.skills-list > div + div { margin-top: 18px; }
+.skills-list dt { font-size: 14px; font-weight: 600; }
+.skills-list dd { margin: 0; color: var(--muted); font-size: 14px; }
+@media (max-width: 600px) {
+  nav { gap: 16px; flex-wrap: wrap; }
+  .skills-list > div { grid-template-columns: 1fr; gap: 4px; }
+}

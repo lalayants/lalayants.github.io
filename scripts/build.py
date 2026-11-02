@@ -9,8 +9,8 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'other': 'EN',
         'other_lang': 'en',
         'title': 'Кирилл Лалаянц — Data Scientist · ML и финансы',
-        'desc': 'Кирилл Лалаянц — Data Scientist в Сбер КИБ. RL-агенты для трейдинга, машинное обучение, '
-                'эконометрика и причинно-следственный анализ. Учусь в магистратуре РЭШ и Сколтеха.',
+        'desc': 'Кирилл Лалаянц — Data Scientist. ML для трейдинга и ценообразования; +5% Front Margin в '
+                'Яндекс Лавке. РЭШ, Сколтех, ИТМО.',
         'skip': 'К содержанию',
         'pdf': 'r',
         'jobs': [('05.2026 — сейчас',
@@ -43,10 +43,10 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
                  ('12.2023 — 07.2024',
                   'Проект BRIZ',
                   'Руководитель команды',
-                  ['Руководил разработкой системы автономной стыковки двух БПЛА: более 90% успешных стыковок '
-                   'на реальном оборудовании, работающий прототип передан заказчику.',
-                   'Подобрал команду, составил roadmap, согласовывал технические подходы, проводил испытания '
-                   'и взаимодействовал с руководителем компании.'])],
+                  ['Организовал разработку системы автономной стыковки двух БПЛА и передачу рабочего '
+                   'прототипа заказчику; доля успешных стыковок на реальном оборудовании — более 90%.',
+                   'Подобрал команду, составил roadmap, согласовал технические подходы и провёл испытания во '
+                   'взаимодействии с руководителем компании.'])],
         'edu': [('2025 — 2027',
                  'Российская экономическая школа',
                  'Магистратура · Экономика, программа «Искусственный интеллект и финтех»'),
@@ -63,12 +63,9 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'top': 'Наверх ↑',
         'updated': 'Обновлено в ноябре 2026 года',
         'other_url': '/',
-        'nav': ['Опыт', 'Образование', 'Контакты'],
-        'intro': 'Работаю Data Scientist в Сбер КИБ: разрабатываю RL-агентов для ценообразования и '
-                 'оптимизации работы торгового деска. Ранее занимался ценообразованием и экспериментами в '
-                 'Яндекс Лавке, а также исследованиями в области робототехники в ИТМО.',
-        'study': 'Параллельно учусь в совместной магистратуре РЭШ и Сколтеха по программе «Искусственный '
-                 'интеллект и финтех».',
+        'nav': ['Опыт', 'Навыки', 'Образование', 'Контакты'],
+        'intro': 'Оптимизировал скидки в Яндекс Лавке (+5% Front Margin) и сократил подготовку экспериментов '
+                 'с нескольких часов до нескольких минут.',
         'cv': 'Резюме (PDF)',
         'experience_title': 'Опыт работы',
         'education_title': 'Образование',
@@ -84,13 +81,20 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
                            'mavros',
                            'Свидетельство о регистрации программы для ЭВМ № 2023686859 · 8 декабря 2023 года',
                            'Соавтор. Правообладатель — Университет ИТМО.',
-                           '/assets/documents/software-2023686859.pdf')]},
+                           '/assets/documents/software-2023686859.pdf')],
+        'institutions': 'РЭШ · Сколтех · ИТМО',
+        'skills_title': 'Навыки',
+        'skills': [('ML и робототехника', 'RL, safe RL, computer vision, SLAM, ROS2'),
+                   ('Эконометрика и эксперименты',
+                    'A/B-тесты, DiD, uplift-модели, ценовая эластичность, временные ряды'),
+                   ('Количественные финансы', 'Оптимизация портфеля, asset pricing, VaR/CVaR'),
+                   ('Инструменты', 'Python, SQL, Pandas, NumPy, SciPy, Jupyter, Git, Docker')]},
  'en': {'name': 'Kirill Lalayants',
         'other': 'RU',
         'other_lang': 'ru',
         'title': 'Kirill Lalayants — Data Scientist · ML & Finance',
-        'desc': 'Kirill Lalayants — Data Scientist at Sberbank CIB. Reinforcement learning for trading, '
-                'machine learning, econometrics and causal inference. Master’s student at NES and Skoltech.',
+        'desc': 'Kirill Lalayants — Data Scientist. ML for trading and pricing; increased Front Margin by 5% '
+                'at Yandex Lavka. NES, Skoltech, ITMO.',
         'skip': 'Skip to content',
         'pdf': 'e',
         'jobs': [('May 2026 — present',
@@ -140,12 +144,9 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'top': 'Back to top ↑',
         'updated': 'Updated November 2026',
         'other_url': '/ru/',
-        'nav': ['Experience', 'Education', 'Contact'],
-        'intro': 'I’m a Data Scientist at Sberbank CIB, where I develop reinforcement learning agents for '
-                 'pricing and trading desk optimization. Previously, I worked on pricing and experimentation '
-                 'at Yandex Lavka and conducted robotics research at ITMO.',
-        'study': 'I’m also pursuing a joint master’s program in AI & FinTech at the New Economic School and '
-                 'Skoltech.',
+        'nav': ['Experience', 'Skills', 'Education', 'Contact'],
+        'intro': 'Increased Front Margin by 5% at Yandex Lavka through discount optimization and reduced '
+                 'experiment setup time from hours to minutes.',
         'cv': 'CV (PDF)',
         'experience_title': 'Experience',
         'education_title': 'Education',
@@ -160,7 +161,14 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
                           ('Quadcopter flight controller based on the mavros software package',
                            'Software registration No. 2023686859 · 8 December 2023',
                            'Co-author. Rights holder: ITMO University.',
-                           '/assets/documents/software-2023686859.pdf')]}}
+                           '/assets/documents/software-2023686859.pdf')],
+        'institutions': 'NES · Skoltech · ITMO',
+        'skills_title': 'Skills',
+        'skills': [('ML & robotics', 'RL, safe RL, computer vision, SLAM, ROS2'),
+                   ('Econometrics & experiments',
+                    'A/B testing, DiD, uplift modeling, price elasticity, time series'),
+                   ('Quantitative finance', 'Portfolio optimization, asset pricing, VaR/CVaR'),
+                   ('Tools', 'Python, SQL, Pandas, NumPy, SciPy, Jupyter, Git, Docker')]}}
 
 def render(lang, c):
     route = '/' if lang == 'en' else '/ru/'
@@ -179,7 +187,7 @@ def render(lang, c):
         },
     }
     nav = ''.join(f'<a href="#{anchor}">{label}</a>' for anchor, label in
-                  zip(['experience', 'education', 'contact'], c['nav']))
+                  zip(['experience', 'skills', 'education', 'contact'], c['nav']))
     jobs = '\n'.join(
         f'<li class="job"><div class="entry-heading"><h3>{company}</h3>'
         f'<span class="date">{date}</span></div><p class="role">{role}</p>'
@@ -194,6 +202,8 @@ def render(lang, c):
         f'<p class="registration-meta">{escape(metadata)} · PDF</p>'
         f'<p class="registration-credit">{escape(credit)}</p></li>'
         for title, metadata, credit, path in c['registrations'])
+    skills = ''.join(f'<div><dt>{escape(label)}</dt><dd>{escape(items)}</dd></div>'
+                     for label, items in c['skills'])
     return f'''<!doctype html>
 <html lang="{lang}">
 <head>
@@ -233,9 +243,9 @@ def render(lang, c):
 <main id="main">
 <section class="about" aria-labelledby="name">
 <h1 id="name">{c['name']}</h1>
-<p class="occupation">Data Scientist</p>
+<p class="occupation">Data Scientist · ML &amp; Finance</p>
 <p>{c['intro']}</p>
-<p>{c['study']}</p>
+<p class="institutions"><a href="#education">{c['institutions']}</a></p>
 <div class="profile-links"><a href="/assets/cvs/Lalayants_cv_{c['pdf']}.pdf" download>{c['cv']}</a><a href="https://github.com/lalayants">GitHub</a><a href="https://linkedin.com/in/lalayants">LinkedIn</a><a href="mailto:lalayantskirill@gmail.com">Email</a></div>
 </section>
 <section id="experience" aria-labelledby="experience-title">
@@ -243,6 +253,10 @@ def render(lang, c):
 <ul class="entries jobs">
 {jobs}
 </ul>
+</section>
+<section id="skills" aria-labelledby="skills-title">
+<h2 id="skills-title">{c['skills_title']}</h2>
+<dl class="skills-list">{skills}</dl>
 </section>
 <section id="education" aria-labelledby="education-title">
 <h2 id="education-title">{c['education_title']}</h2>
@@ -263,7 +277,6 @@ def render(lang, c):
 <li><span class="note-title">{c['award']}</span><span>{c['award_desc']}</span></li>
 <li><span class="note-title">{c['language']}</span><span>{c['language_desc']}</span></li>
 </ul>
-<p class="tools"><span>{c['tool_label']}:</span> Python, SQL, Pandas, NumPy, SciPy, Git, Docker.</p>
 </section>
 <section id="contact" aria-labelledby="contact-title">
 <h2 id="contact-title">{c['contact_title']}</h2>
