@@ -21,16 +21,18 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
                  ('01.2026 — 05.2026',
                   'Яндекс Лавка',
                   'Data Scientist',
-                  ['Оптимизировал размеры скидок, увеличив показатель Front Margin на 5%.',
-                   'Автоматизировал процесс согласования скидок для коммерческих менеджеров.',
-                   'Оценивал влияние промоакций на выручку, маржу и конверсию с помощью A/B-тестов, '
-                   'uplift-моделей и DiD.',
-                   'Разработал инфраструктуру для настройки экспериментов, сбора событий и расчёта метрик.']),
+                  ['Оптимизировал размеры скидок на основе оценки ценовой эластичности: +5% Front Margin, '
+                   'подтверждено масштабным A/B-тестом.',
+                   'Автоматизировал процесс заведения и согласования экспериментов: сократил время '
+                   'подготовки с нескольких часов до нескольких минут.',
+                   'Разработал инфраструктуру сбора и анализа результатов экспериментов и дашборды для '
+                   'оценки эластичности.',
+                   'Автоматизировал отбор товаров для экспериментов с учётом объёма продаж и популярности.']),
                  ('07.2022 — 06.2025',
                   'Университет ИТМО',
                   'Инженер-исследователь',
-                  ['Работал над проектами по ML, компьютерному зрению и робототехнике в лаборатории адаптивных и '
-                   'нелинейных систем управления.',
+                  ['Работал над проектами по ML, компьютерному зрению и робототехнике в лаборатории '
+                   'адаптивных и нелинейных систем управления.',
                    'Разработал и внедрил SLAM-систему для БПЛА, работающую с частотой 25 кадров/с на NVIDIA '
                    'Jetson Xavier.',
                    'Реализовал safe RL для управления манипулятором: доля успешных захватов — 95%, ошибка '
@@ -93,11 +95,13 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
                  ('Jan 2026 — May 2026',
                   'Yandex Lavka',
                   'Data Scientist',
-                  ['Optimized discount levels, increasing Front Margin by 5%.',
-                   'Automated the discount approval process for commercial managers.',
-                   'Evaluated the impact of promotions on revenue, margin and conversion using A/B testing, '
-                   'uplift modeling and DiD.',
-                   'Built infrastructure for experiment setup, event logging and metric calculation.']),
+                  ['Optimized discount levels using price elasticity estimates, increasing Front Margin by '
+                   '5%, as confirmed by a large-scale A/B test.',
+                   'Automated experiment setup and approval, reducing preparation time from several hours to '
+                   'a few minutes.',
+                   'Built infrastructure for collecting and analyzing experiment results, along with '
+                   'dashboards for price elasticity analysis.',
+                   'Automated product selection for experiments based on sales volume and popularity.']),
                  ('Jul 2022 — Jun 2025',
                   'ITMO University',
                   'Research Engineer',
