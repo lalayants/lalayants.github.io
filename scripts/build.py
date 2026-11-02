@@ -33,8 +33,8 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
                   'Инженер-исследователь',
                   ['С нуля разработал SLAM-систему для полётов БПЛА в помещениях без GPS: адаптировал '
                    'алгоритм и обеспечил 25 кадров/с на Jetson Xavier в реальных полётах.',
-                   'Реализовал RL для манипулятора в симуляции: достиг 95% успешных захватов и снизил '
-                   'число коллизий.',
+                   'Реализовал RL для манипулятора в симуляции: достиг 95% успешных захватов и снизил число '
+                   'коллизий.',
                    'Разработал инструменты калибровки положения инструмента и камеры на реальном '
                    'манипуляторе; ошибка калибровки — менее 1 мм.',
                    'Разработал сегментацию розетки по RGB-D облаку точек, расчёт плоскостей и расстояний в '
@@ -86,9 +86,9 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
                            '/assets/documents/software-2023686859.pdf')],
         'institutions': 'РЭШ · Сколтех · ИТМО',
         'skills_title': 'Навыки',
-        'skills': [('Machine Learning',
-                    'Reinforcement learning (SAC), computer vision, сегментация изображений и '
-                    'облаков точек, 6D pose estimation'),
+        'skills': [('ML & Deep Learning',
+                    'PyTorch, нейронные сети (MLP), генеративные модели (VAE/CVAE), RL, градиентный бустинг '
+                    '(CatBoost), scikit-learn, Optuna, подбор гиперпараметров и валидация моделей'),
                    ('Эконометрика и эксперименты',
                     'A/B-тесты, DiD, uplift-модели, оценка ценовой эластичности, эконометрика временных '
                     'рядов, панельные данные'),
@@ -101,8 +101,9 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
                     'Git, Docker, автоматизация конфигов и экспериментов, пайплайны сбора событий и расчёта '
                     'метрик, аналитические дашборды'),
                    ('Робототехника',
-                    'ROS2, SLAM, RGB-D и облака точек, оценка плоскостей, калибровка инструментов и камер, '
-                    'MuJoCo, Gazebo, PyBullet, NVIDIA Jetson Xavier'),
+                    'Computer vision, сегментация изображений и облаков точек, RGB-D, 6D pose estimation, '
+                    'SLAM, ROS2, калибровка инструментов и камер, MuJoCo, Gazebo, PyBullet, NVIDIA Jetson '
+                    'Xavier'),
                    ('Руководство проектами',
                     'Подбор команды, roadmap, согласование технических решений, организация испытаний, '
                     'взаимодействие с заказчиком')]},
@@ -133,8 +134,8 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
                   'Research Engineer',
                   ['Built a SLAM system from scratch for GPS-denied indoor UAV flights: adapted the '
                    'algorithm and achieved 25 FPS on Jetson Xavier in real-world flights.',
-                   'Implemented RL for a manipulator in simulation, achieving a 95% grasp success rate '
-                   'and reducing collisions.',
+                   'Implemented RL for a manipulator in simulation, achieving a 95% grasp success rate and '
+                   'reducing collisions.',
                    'Developed tools to calibrate tool and camera poses on a real manipulator, with errors '
                    'below 1 mm.',
                    'Developed socket segmentation from RGB-D point clouds, plane estimation and distance '
@@ -183,9 +184,9 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
                            '/assets/documents/software-2023686859.pdf')],
         'institutions': 'NES · Skoltech · ITMO',
         'skills_title': 'Skills',
-        'skills': [('Machine Learning',
-                    'Reinforcement learning (SAC), computer vision, image and point-cloud '
-                    'segmentation, 6D pose estimation'),
+        'skills': [('ML & Deep Learning',
+                    'PyTorch, neural networks (MLP), generative models (VAE/CVAE), RL, gradient boosting '
+                    '(CatBoost), scikit-learn, Optuna, hyperparameter tuning and model validation'),
                    ('Econometrics & experiments',
                     'A/B testing, DiD, uplift modeling, price elasticity estimation, time series '
                     'econometrics, panel data'),
@@ -197,8 +198,8 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
                     'Git, Docker, configuration and experiment automation, event logging and metric '
                     'pipelines, analytical dashboards'),
                    ('Robotics',
-                    'ROS2, SLAM, RGB-D and point clouds, plane estimation, tool and camera calibration, '
-                    'MuJoCo, Gazebo, PyBullet, NVIDIA Jetson Xavier'),
+                    'Computer vision, image and point-cloud segmentation, RGB-D, 6D pose estimation, SLAM, '
+                    'ROS2, tool and camera calibration, MuJoCo, Gazebo, PyBullet, NVIDIA Jetson Xavier'),
                    ('Project leadership',
                     'Team formation, roadmapping, technical decision review, test coordination, client '
                     'communication')]}}
