@@ -9,8 +9,8 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'other': 'EN',
         'other_lang': 'en',
         'title': 'Кирилл Лалаянц — Data Scientist · ML и финансы',
-        'desc': 'Кирилл Лалаянц — Data Scientist в Сбер КИБ. Машинное обучение, RL-агенты для трейдинга, '
-                'эконометрика и причинный анализ. Магистратура РЭШ и Сколтеха.',
+        'desc': 'Кирилл Лалаянц — Data Scientist в Сбер КИБ. RL-агенты для трейдинга, машинное обучение, '
+                'эконометрика и причинно-следственный анализ. Учусь в магистратуре РЭШ и Сколтеха.',
         'skip': 'К содержанию',
         'pdf': 'r',
         'jobs': [('05.2026 — сейчас',
@@ -21,100 +21,102 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
                  ('01.2026 — 05.2026',
                   'Яндекс Лавка',
                   'Data Scientist',
-                  ['Оптимизировал размеры скидок: Front Margin вырос на 5%.',
-                   'Автоматизировал согласование скидок для коммерческих менеджеров.',
-                   'Оценивал эффект промо с помощью A/B-тестов, uplift-моделей и DiD.',
-                   'Разработал инфраструктуру экспериментов.']),
+                  ['Оптимизировал размеры скидок, увеличив показатель Front Margin на 5%.',
+                   'Автоматизировал процесс согласования скидок для коммерческих менеджеров.',
+                   'Оценивал влияние промоакций на выручку, маржу и конверсию с помощью A/B-тестов, '
+                   'uplift-моделей и DiD.',
+                   'Разработал инфраструктуру для настройки экспериментов, сбора событий и расчёта метрик.']),
                  ('07.2022 — 06.2025',
                   'Университет ИТМО',
                   'Инженер-исследователь',
-                  ['Работал над ML, компьютерным зрением и робототехникой в лаборатории адаптивных и '
+                  ['Работал над проектами по ML, компьютерному зрению и робототехнике в лаборатории адаптивных и '
                    'нелинейных систем управления.',
-                   'Разработал SLAM для БПЛА: 25 кадров/с на Jetson Xavier.',
-                   'Реализовал безопасное RL для манипулятора: 95% успешных захватов, ошибка калибровки '
-                   'менее 1 мм.']),
+                   'Разработал и внедрил SLAM-систему для БПЛА, работающую с частотой 25 кадров/с на NVIDIA '
+                   'Jetson Xavier.',
+                   'Реализовал safe RL для управления манипулятором: доля успешных захватов — 95%, ошибка '
+                   'калибровки инструмента — менее 1 мм.']),
                  ('12.2023 — 07.2024',
                   'Проект BRIZ',
                   'Руководитель команды',
-                  ['Руководил командой из трёх разработчиков в проекте кооперативной воздушной '
-                   'робототехники.',
-                   'Разрабатывал управление и планирование на PX4 и ROS2.'])],
+                  ['Руководил командой из трёх разработчиков в проекте автономной стыковки БПЛА.',
+                   'Разрабатывал систему управления и планирования движения с использованием PX4 и ROS2.'])],
         'edu': [('2025 — 2027',
                  'Российская экономическая школа',
-                 'Магистратура · Экономика, «Искусственный интеллект и финтех»'),
+                 'Магистратура · Экономика, программа «Искусственный интеллект и финтех»'),
                 ('2025 — 2027', 'Сколтех', 'Магистратура · Науки о данных'),
                 ('2021 — 2025', 'Университет ИТМО', 'Бакалавриат · Робототехника и искусственный интеллект')],
         'tool_label': 'Инструменты',
         'achievement': 'Контрибьютор Ultralytics',
-        'achievement_desc': 'Исправление ошибки при переносе моделей на TPU.',
+        'achievement_desc': 'Исправил ошибку, возникавшую при переносе моделей на TPU.',
         'award': 'Победитель хакатона StarLine',
         'award_desc': '«Беспилотное будущее», 2023.',
-        'language': 'Английский C1',
+        'language': 'Английский — C1',
         'language_desc': 'TOEFL iBT · 106/120.',
         'footer': 'Кирилл Лалаянц',
         'top': 'Наверх ↑',
-        'updated': 'Обновлено в ноябре 2026',
+        'updated': 'Обновлено в ноябре 2026 года',
         'other_url': '/',
         'nav': ['Опыт', 'Образование', 'Контакты'],
-        'intro': 'Я Data Scientist в Сбер КИБ: разрабатываю RL-агентов для ценообразования и оптимизации '
-                 'работы торгового деска. До этого занимался ценообразованием и экспериментами в Яндекс '
-                 'Лавке и исследованиями в робототехнике в ИТМО.',
-        'study': 'Параллельно учусь в совместной магистратуре РЭШ и Сколтеха: искусственный интеллект, '
-                 'финансы и науки о данных.',
+        'intro': 'Работаю Data Scientist в Сбер КИБ: разрабатываю RL-агентов для ценообразования и '
+                 'оптимизации работы торгового деска. Ранее занимался ценообразованием и экспериментами в '
+                 'Яндекс Лавке, а также исследованиями в области робототехники в ИТМО.',
+        'study': 'Параллельно учусь в совместной магистратуре РЭШ и Сколтеха по программе «Искусственный '
+                 'интеллект и финтех».',
         'cv': 'Резюме (PDF)',
         'experience_title': 'Опыт работы',
         'education_title': 'Образование',
         'recognition': 'Другие проекты и достижения',
         'contact_title': 'Контакты',
-        'registrations_title': 'Патент и регистрация ПО',
+        'registrations_title': 'Патент и свидетельство о регистрации ПО',
         'registrations': [('Способ получения сигнала с оценками параметров синхронного двигателя с '
                            'постоянными магнитами',
-                           'Патент РФ № 2851523 · 25 ноября 2025',
+                           'Патент РФ № 2851523 · 25 ноября 2025 года',
                            'Соавтор. Патентообладатель — АО «Диаконт».',
                            '/assets/documents/patent-2851523.pdf'),
                           ('Полетный контроллер для управления квадрокоптером на базе программного пакета '
                            'mavros',
-                           'Регистрация программы для ЭВМ № 2023686859 · 8 декабря 2023',
+                           'Свидетельство о регистрации программы для ЭВМ № 2023686859 · 8 декабря 2023 года',
                            'Соавтор. Правообладатель — Университет ИТМО.',
                            '/assets/documents/software-2023686859.pdf')]},
  'en': {'name': 'Kirill Lalayants',
         'other': 'RU',
         'other_lang': 'ru',
         'title': 'Kirill Lalayants — Data Scientist · ML & Finance',
-        'desc': 'Kirill Lalayants, Data Scientist at Sberbank CIB. Machine learning, reinforcement learning '
-                'for trading, econometrics and causal inference. NES and Skoltech graduate student.',
+        'desc': 'Kirill Lalayants — Data Scientist at Sberbank CIB. Reinforcement learning for trading, '
+                'machine learning, econometrics and causal inference. Master’s student at NES and Skoltech.',
         'skip': 'Skip to content',
         'pdf': 'e',
         'jobs': [('May 2026 — present',
                   'Sberbank CIB',
                   'Data Scientist',
-                  ['Developing and implementing RL agents for trading desk pricing and optimization.']),
+                  ['Develop and implement RL agents for pricing and trading desk optimization.']),
                  ('Jan 2026 — May 2026',
                   'Yandex Lavka',
                   'Data Scientist',
-                  ['Optimized discount sizing, increasing Front Margin by 5%.',
-                   'Automated discount approvals for commercial managers.',
-                   'Measured promotion impact using A/B testing, uplift modeling and DiD.',
-                   'Built experimentation infrastructure.']),
+                  ['Optimized discount levels, increasing Front Margin by 5%.',
+                   'Automated the discount approval process for commercial managers.',
+                   'Evaluated the impact of promotions on revenue, margin and conversion using A/B testing, '
+                   'uplift modeling and DiD.',
+                   'Built infrastructure for experiment setup, event logging and metric calculation.']),
                  ('Jul 2022 — Jun 2025',
                   'ITMO University',
                   'Research Engineer',
-                  ['Worked on ML, computer vision and robotics at the Adaptive and Nonlinear Control Systems '
-                   'Lab.',
-                   'Deployed UAV SLAM at 25 FPS on Jetson Xavier.',
-                   'Implemented safe RL for manipulation: 95% grasp success and tool calibration error below '
-                   '1 mm.']),
+                  ['Worked on ML, computer vision and robotics projects at the Adaptive and Nonlinear '
+                   'Control Systems Lab.',
+                   'Developed and deployed a UAV SLAM system running at 25 FPS on NVIDIA Jetson Xavier.',
+                   'Implemented safe RL for robotic manipulation, achieving a 95% grasp success rate and a '
+                   'tool calibration error of less than 1 mm.']),
                  ('Dec 2023 — Jul 2024',
                   'BRIZ Project',
                   'Team Lead',
-                  ['Led a team of three developers in a collaborative aerial robotics project.',
-                   'Implemented flight control and motion planning with PX4 and ROS2.'])],
+                  ['Led a team of three developers on a collaborative aerial robotics project.',
+                   'Developed flight control and motion planning systems using PX4 and ROS2.'])],
         'edu': [('2025 — 2027', 'New Economic School', 'Master’s program · AI & FinTech'),
                 ('2025 — 2027', 'Skoltech', 'Master’s program · Data Science'),
                 ('2021 — 2025', 'ITMO University', 'B.Sc. · Robotics & Artificial Intelligence')],
         'tool_label': 'Toolkit',
         'achievement': 'Ultralytics contributor',
-        'achievement_desc': 'Fixed a bug affecting model transfer to TPU.',
+        'achievement_desc': 'Fixed a bug that occurred when moving models to a TPU.',
         'award': 'StarLine Hackathon winner',
         'award_desc': '“Autonomous Future”, 2023.',
         'language': 'English · Advanced',
@@ -124,15 +126,15 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'updated': 'Updated November 2026',
         'other_url': '/ru/',
         'nav': ['Experience', 'Education', 'Contact'],
-        'intro': 'I’m a Data Scientist at Sberbank CIB, developing reinforcement learning agents for trading '
-                 'desk pricing and optimization. Previously, I worked on pricing and experimentation at '
-                 'Yandex Lavka, and robotics research at ITMO.',
-        'study': 'I’m also pursuing a joint master’s program at the New Economic School and Skoltech, '
-                 'focused on AI, finance and data science.',
+        'intro': 'I’m a Data Scientist at Sberbank CIB, where I develop reinforcement learning agents for '
+                 'pricing and trading desk optimization. Previously, I worked on pricing and experimentation '
+                 'at Yandex Lavka and conducted robotics research at ITMO.',
+        'study': 'I’m also pursuing a joint master’s program in AI & FinTech at the New Economic School and '
+                 'Skoltech.',
         'cv': 'CV (PDF)',
         'experience_title': 'Experience',
         'education_title': 'Education',
-        'recognition': 'Other work & background',
+        'recognition': 'Contributions & achievements',
         'contact_title': 'Contact',
         'registrations_title': 'Patent & software registration',
         'registrations': [('Method for obtaining a signal with parameter estimates of a permanent-magnet '
@@ -144,7 +146,6 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
                            'Software registration No. 2023686859 · 8 December 2023',
                            'Co-author. Rights holder: ITMO University.',
                            '/assets/documents/software-2023686859.pdf')]}}
-
 
 def render(lang, c):
     route = '/' if lang == 'en' else '/ru/'
