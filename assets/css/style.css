@@ -46,11 +46,35 @@ main > section:last-child { margin-bottom: 0; }
 .role { color: var(--muted); font-size: 14px; margin-bottom: 9px; }
 .education-item + .education-item { margin-top: 22px; }
 .education-item p { color: var(--muted); font-size: 14px; margin-top: 3px; }
-.talks-credit { margin-bottom: 18px; }
-.talks-credit, .conference-talk p { color: var(--muted); font-size: 14px; }
-.conference-talk p { margin-top: 3px; }
-.conference-talk + .conference-talk { margin-top: 22px; }
-.talk-links { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 7px; font-size: 14px; }
+.research {
+  padding: clamp(16px, 4vw, 28px);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #f4f5f2;
+}
+.research-group > h3 { margin-bottom: 16px; color: var(--muted); font-size: 14px; }
+.research-group + .research-group { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); }
+.research-item + .research-item { margin-top: 22px; }
+.research-item h4 { margin: 0; font-size: 16px; font-weight: 600; line-height: 1.45; }
+.research-meta { color: var(--muted); font-size: 13px; }
+.research-item p.research-meta { margin-top: 3px; }
+.talk-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 16px; margin-bottom: 4px; }
+.research-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
+.research-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 33px;
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.research-links .source-link { background: #e9eff5; border-color: #d6e1eb; }
+.research-links a:hover { border-color: currentColor; }
 .notes { list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; }
 .notes li > a, .note-title { display: block; font-weight: 500; }
 .notes li > span:last-child { display: block; color: var(--muted); font-size: 14px; margin-top: 3px; }
@@ -87,29 +111,8 @@ footer a { color: var(--muted); text-decoration: none; }
   h2 { font-size: 16px; margin-bottom: 16px; }
   h3 { font-size: 13px; }
   main > section { padding-bottom: 18px; margin-bottom: 20px; }
-  .job, .education-item, .conference-talk { break-inside: avoid; }
+  .job, .education-item, .research-item { break-inside: avoid; }
 }
-
-.registration + .registration { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line); }
-.registration h3 { font-weight: 500; line-height: 1.55; }
-.registration-meta, .registration-credit { color: var(--muted); font-size: 13px; }
-.registration-meta { margin-top: 6px; }
-.registration-credit { margin-top: 3px; }
-.registration-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-.registration-links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  min-height: 38px;
-  padding: 5px 13px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  font-size: 13px;
-  font-weight: 500;
-  text-decoration: none;
-}
-.registration-links .registry-link { background: #edf2f6; border-color: #dce5ed; }
-.registration-links a:hover { border-color: currentColor; }
 
 .institutions { font-size: 14px; color: var(--muted); }
 .institutions a { color: inherit; text-decoration: none; }

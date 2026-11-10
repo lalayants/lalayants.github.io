@@ -1,10 +1,12 @@
 """Generate the static language editions: python3 scripts/build.py."""
 from pathlib import Path
 from html import escape
+from hashlib import sha256
 import json
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = "https://lalayants.github.io"
+CSS_VERSION = sha256((ROOT / 'assets/css/style.css').read_bytes()).hexdigest()[:12]
 FIPS_REGISTRY = "https://www.fips.ru/registers-doc-view/fips_servlet"
 REGISTRATION_DOCUMENTS = {
     'patent': ('2851523', 'RUPAT'),
@@ -80,7 +82,7 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'top': 'Наверх ↑',
         'updated': 'Обновлено в ноябре 2026 года',
         'other_url': '/',
-        'nav': ['Опыт', 'Навыки', 'Образование', 'Доклады', 'Контакты'],
+        'nav': ['Опыт', 'Навыки', 'Образование', 'Наука', 'Контакты'],
         'intro': 'Работаю Data Scientist в Сбер КИБ: применяю ML к задачам трейдинга и ценообразования. '
                  'Люблю финансы и экономику. В Яндекс Лавке оптимизировал скидки (+5% Front Margin) и '
                  'автоматизировал подготовку экспериментов. До этого занимался исследованиями в ИТМО и '
@@ -88,29 +90,29 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'cv': 'Резюме (PDF)',
         'experience_title': 'Опыт работы',
         'education_title': 'Образование',
+        'research_title': 'Научная деятельность',
         'talks_title': 'Доклады на конференциях',
-        'talks_credit': 'Секция «Робототехника и искусственный интеллект». Соавтор — Владислав Дюжев, '
-                        'научный руководитель — Алексей Ведяков.',
-        'talks': [(2024, 'Исследование применения диффузионных моделей в робототехнических задачах',
-                   'XIII Конгресс молодых учёных ИТМО · 9 апреля 2024 · онлайн'),
-                  (2023, 'Разработка системы анализа аэроснимков для определения прорастаемости '
-                   'сельскохозяйственных культур',
-                   'XII Конгресс молодых учёных ИТМО · 4 апреля 2023 · онлайн')],
-        'talk_links': {'abstract': 'Тезисы', 'abstract_pdf': 'Тезисы (PDF)', 'program': 'Программа (PDF)',
-                       'collection': 'Сборник тезисов', 'recommendation': 'Рекомендация к публикации (PDF)'},
+        'online': 'онлайн',
+        'talks': [('2024-04-09', '9 апреля 2024', 'XIII Конгресс молодых учёных ИТМО',
+                   'Исследование применения диффузионных моделей в робототехнических задачах'),
+                  ('2023-04-04', '4 апреля 2023', 'XII Конгресс молодых учёных ИТМО',
+                   'Разработка системы анализа аэроснимков для определения прорастаемости '
+                   'сельскохозяйственных культур')],
+        'talk_links': {'abstract': 'Тезисы', 'abstract_pdf': 'PDF', 'program': 'Программа',
+                       'collection': 'Сборник тезисов', 'recommendation': 'Рекомендация к публикации'},
         'recognition': 'Другие проекты и достижения',
         'contact_title': 'Контакты',
-        'registrations_title': 'Патент и свидетельство о регистрации ПО',
+        'registrations_title': 'Патент и регистрация ПО',
         'fips_link': 'Карточка ФИПС',
         'registrations': [('Способ получения сигнала с оценками параметров синхронного двигателя с '
                            'постоянными магнитами',
                            'Патент РФ № 2851523 · 25 ноября 2025 года',
-                           'Соавтор. Патентообладатель — АО «Диаконт».',
+                           'Патентообладатель — АО «Диаконт».',
                            'patent'),
                           ('Полетный контроллер для управления квадрокоптером на базе программного пакета '
                            'mavros',
                            'Свидетельство о регистрации программы для ЭВМ № 2023686859 · 8 декабря 2023 года',
-                           'Соавтор. Правообладатель — Университет ИТМО.',
+                           'Правообладатель — Университет ИТМО.',
                            'software')],
         'institutions': 'РЭШ · Сколтех · ИТМО',
         'skills_title': 'Навыки',
@@ -190,7 +192,7 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'top': 'Back to top ↑',
         'updated': 'Updated November 2026',
         'other_url': '/ru/',
-        'nav': ['Experience', 'Skills', 'Education', 'Talks', 'Contact'],
+        'nav': ['Experience', 'Skills', 'Education', 'Research', 'Contact'],
         'intro': 'I’m a Data Scientist at Sberbank CIB, applying ML to trading and pricing, with a strong '
                  'interest in finance and economics. At Yandex Lavka, I optimized discounts (+5% Front '
                  'Margin) and automated experiment setup. Previously, I conducted research at ITMO and led '
@@ -198,15 +200,15 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'cv': 'CV (PDF)',
         'experience_title': 'Experience',
         'education_title': 'Education',
+        'research_title': 'Research',
         'talks_title': 'Conference talks',
-        'talks_credit': 'Robotics and Artificial Intelligence session. Co-author: Vladislav Dyuzhev. '
-                        'Research supervisor: Alexey Vedyakov.',
-        'talks': [(2024, 'Investigating the use of diffusion models in robotics',
-                   '13th ITMO Congress of Young Scientists · 9 April 2024 · Online'),
-                  (2023, 'Developing a system for aerial image analysis to assess crop germination',
-                   '12th ITMO Congress of Young Scientists · 4 April 2023 · Online')],
-        'talk_links': {'abstract': 'Abstract', 'abstract_pdf': 'Abstract (PDF)', 'program': 'Program (PDF)',
-                       'collection': 'Book of abstracts', 'recommendation': 'Publication recommendation (PDF)'},
+        'online': 'online',
+        'talks': [('2024-04-09', '9 April 2024', '13th ITMO Congress of Young Scientists',
+                   'Investigating the use of diffusion models in robotics'),
+                  ('2023-04-04', '4 April 2023', '12th ITMO Congress of Young Scientists',
+                   'Developing a system for aerial image analysis to assess crop germination')],
+        'talk_links': {'abstract': 'Abstract', 'abstract_pdf': 'PDF', 'program': 'Program',
+                       'collection': 'Book of abstracts', 'recommendation': 'Publication recommendation'},
         'recognition': 'Contributions & achievements',
         'contact_title': 'Contact',
         'registrations_title': 'Patent & software registration',
@@ -214,11 +216,11 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'registrations': [('Method for obtaining a signal with parameter estimates of a permanent-magnet '
                            'synchronous motor',
                            'Russian patent No. 2851523 · 25 November 2025',
-                           'Co-inventor. Patent holder: Diakont JSC.',
+                           'Patent holder: Diakont JSC.',
                            'patent'),
                           ('Quadcopter flight controller based on the mavros software package',
                            'Software registration No. 2023686859 · 8 December 2023',
-                           'Co-author. Rights holder: ITMO University.',
+                           'Rights holder: ITMO University.',
                            'software')],
         'institutions': 'NES · Skoltech · ITMO',
         'skills_title': 'Skills',
@@ -259,7 +261,7 @@ def render(lang, c):
         },
     }
     nav = ''.join(f'<a href="#{anchor}">{label}</a>' for anchor, label in
-                  zip(['experience', 'skills', 'education', 'talks', 'contact'], c['nav']))
+                  zip(['experience', 'skills', 'education', 'research', 'contact'], c['nav']))
     jobs = '\n'.join(
         f'<li class="job"><div class="entry-heading"><h3>{company}</h3>'
         f'<span class="date">{date}</span></div><p class="role">{role}</p>'
@@ -270,14 +272,20 @@ def render(lang, c):
         f'<span class="date">{date}</span></div><p>{degree}</p></li>'
         for date, school, degree in c['edu'])
     talk_items = []
-    for year, title, event in c['talks']:
+    for date, date_label, event, title in c['talks']:
+        year = int(date[:4])
         links = []
-        for kind, link_url in CONFERENCE_LINKS[year]:
+        for index, (kind, link_url) in enumerate(CONFERENCE_LINKS[year]):
             label = escape(c['talk_links'][kind])
-            links.append(f'<a href="{escape(link_url)}" hreflang="ru" aria-label="{label} · {year}">{label}</a>')
+            primary = ' class="source-link"' if index == 0 else ''
+            links.append(f'<a{primary} href="{escape(link_url)}" hreflang="ru" '
+                         f'aria-label="{label} · {year}">{label}</a>')
         talk_items.append(
-            f'<li class="conference-talk"><h3>{escape(title)}</h3><p>{escape(event)}</p>'
-            f'<div class="talk-links">{"".join(links)}</div></li>')
+            '<li class="research-item">\n'
+            f'<div class="research-meta talk-meta"><span>{escape(event)}</span>'
+            f'<span><time datetime="{date}">{escape(date_label)}</time> · {c["online"]}</span></div>\n'
+            f'<h4>{escape(title)}</h4>\n'
+            f'<div class="research-links">{"".join(links)}</div>\n</li>')
     talks = '\n'.join(talk_items)
     registration_items = []
     fips_label = escape(c['fips_link'])
@@ -286,14 +294,14 @@ def render(lang, c):
         registry_url = f'{FIPS_REGISTRY}?DB={database}&DocNumber={number}&TypeFile=html'
         pdf_path = f'/assets/documents/{document}-{number}.pdf'
         registration_items.append(
-            f'<li class="registration"><h3>{escape(title)}</h3>'
-            f'<p class="registration-meta">{escape(metadata)}</p>'
-            f'<p class="registration-credit">{escape(credit)}</p>'
-            '<div class="registration-links">'
-            f'<a class="registry-link" href="{escape(registry_url)}" aria-label="{fips_label} · {number}">'
+            f'<li class="research-item">\n<h4>{escape(title)}</h4>\n'
+            f'<p class="research-meta">{escape(metadata)}</p>\n'
+            f'<p class="research-meta">{escape(credit)}</p>\n'
+            '<div class="research-links">'
+            f'<a class="source-link" href="{escape(registry_url)}" aria-label="{fips_label} · {number}">'
             f'{fips_label} <span aria-hidden="true">↗</span></a>'
             f'<a href="{pdf_path}" aria-label="PDF · {number}">PDF</a>'
-            '</div></li>')
+            '</div>\n</li>')
     registrations = '\n'.join(registration_items)
     skills = ''.join(f'<div><dt>{escape(label)}</dt><dd>{escape(items)}</dd></div>'
                      for label, items in c['skills'])
@@ -322,7 +330,7 @@ def render(lang, c):
 <meta property="og:image:alt" content="Kirill Lalayants — Data Scientist">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css?v={CSS_VERSION}">
 <script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script>
 </head>
 <body id="top">
@@ -357,18 +365,20 @@ def render(lang, c):
 {education}
 </ul>
 </section>
-<section id="talks" aria-labelledby="talks-title">
-<h2 id="talks-title">{c['talks_title']}</h2>
-<p class="talks-credit">{escape(c['talks_credit'])}</p>
+<section id="research" class="research" aria-labelledby="research-title">
+<h2 id="research-title">{c['research_title']}</h2>
+<section id="talks" class="research-group" aria-labelledby="talks-title">
+<h3 id="talks-title">{c['talks_title']}</h3>
 <ul class="entries">
 {talks}
 </ul>
 </section>
-<section id="registrations" aria-labelledby="registrations-title">
-<h2 id="registrations-title">{c['registrations_title']}</h2>
-<ul class="entries registrations">
+<section id="registrations" class="research-group" aria-labelledby="registrations-title">
+<h3 id="registrations-title">{c['registrations_title']}</h3>
+<ul class="entries">
 {registrations}
 </ul>
+</section>
 </section>
 <section aria-labelledby="other-title">
 <h2 id="other-title">{c['recognition']}</h2>
