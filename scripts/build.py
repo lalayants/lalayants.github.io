@@ -10,6 +10,18 @@ REGISTRATION_DOCUMENTS = {
     'patent': ('2851523', 'RUPAT'),
     'software': ('2023686859', 'EVM'),
 }
+CONFERENCE_LINKS = {
+    2024: (
+        ('abstract', 'https://kmu.itmo.ru/digests/article/12672'),
+        ('abstract_pdf', 'https://kmu.itmo.ru/file/download/application/40016'),
+        ('program', 'https://kmu.itmo.ru/file/download/congress/35#page=73'),
+    ),
+    2023: (
+        ('collection', 'https://kmu.itmo.ru/digests/section/661'),
+        ('program', 'https://kmu.itmo.ru/file/download/674#page=87'),
+        ('recommendation', 'https://kmu.itmo.ru/file/download/646#page=66'),
+    ),
+}
 CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'other': 'EN',
         'other_lang': 'en',
@@ -68,7 +80,7 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'top': 'Наверх ↑',
         'updated': 'Обновлено в ноябре 2026 года',
         'other_url': '/',
-        'nav': ['Опыт', 'Навыки', 'Образование', 'Контакты'],
+        'nav': ['Опыт', 'Навыки', 'Образование', 'Доклады', 'Контакты'],
         'intro': 'Работаю Data Scientist в Сбер КИБ: применяю ML к задачам трейдинга и ценообразования. '
                  'Люблю финансы и экономику. В Яндекс Лавке оптимизировал скидки (+5% Front Margin) и '
                  'автоматизировал подготовку экспериментов. До этого занимался исследованиями в ИТМО и '
@@ -76,6 +88,16 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'cv': 'Резюме (PDF)',
         'experience_title': 'Опыт работы',
         'education_title': 'Образование',
+        'talks_title': 'Доклады на конференциях',
+        'talks_credit': 'Секция «Робототехника и искусственный интеллект». Соавтор — Владислав Дюжев, '
+                        'научный руководитель — Алексей Ведяков.',
+        'talks': [(2024, 'Исследование применения диффузионных моделей в робототехнических задачах',
+                   'XIII Конгресс молодых учёных ИТМО · 9 апреля 2024 · онлайн'),
+                  (2023, 'Разработка системы анализа аэроснимков для определения прорастаемости '
+                   'сельскохозяйственных культур',
+                   'XII Конгресс молодых учёных ИТМО · 4 апреля 2023 · онлайн')],
+        'talk_links': {'abstract': 'Тезисы', 'abstract_pdf': 'Тезисы (PDF)', 'program': 'Программа (PDF)',
+                       'collection': 'Сборник тезисов', 'recommendation': 'Рекомендация к публикации (PDF)'},
         'recognition': 'Другие проекты и достижения',
         'contact_title': 'Контакты',
         'registrations_title': 'Патент и свидетельство о регистрации ПО',
@@ -168,7 +190,7 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'top': 'Back to top ↑',
         'updated': 'Updated November 2026',
         'other_url': '/ru/',
-        'nav': ['Experience', 'Skills', 'Education', 'Contact'],
+        'nav': ['Experience', 'Skills', 'Education', 'Talks', 'Contact'],
         'intro': 'I’m a Data Scientist at Sberbank CIB, applying ML to trading and pricing, with a strong '
                  'interest in finance and economics. At Yandex Lavka, I optimized discounts (+5% Front '
                  'Margin) and automated experiment setup. Previously, I conducted research at ITMO and led '
@@ -176,6 +198,15 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'cv': 'CV (PDF)',
         'experience_title': 'Experience',
         'education_title': 'Education',
+        'talks_title': 'Conference talks',
+        'talks_credit': 'Robotics and Artificial Intelligence session. Co-author: Vladislav Dyuzhev. '
+                        'Research supervisor: Alexey Vedyakov.',
+        'talks': [(2024, 'Investigating the use of diffusion models in robotics',
+                   '13th ITMO Congress of Young Scientists · 9 April 2024 · Online'),
+                  (2023, 'Developing a system for aerial image analysis to assess crop germination',
+                   '12th ITMO Congress of Young Scientists · 4 April 2023 · Online')],
+        'talk_links': {'abstract': 'Abstract', 'abstract_pdf': 'Abstract (PDF)', 'program': 'Program (PDF)',
+                       'collection': 'Book of abstracts', 'recommendation': 'Publication recommendation (PDF)'},
         'recognition': 'Contributions & achievements',
         'contact_title': 'Contact',
         'registrations_title': 'Patent & software registration',
@@ -228,7 +259,7 @@ def render(lang, c):
         },
     }
     nav = ''.join(f'<a href="#{anchor}">{label}</a>' for anchor, label in
-                  zip(['experience', 'skills', 'education', 'contact'], c['nav']))
+                  zip(['experience', 'skills', 'education', 'talks', 'contact'], c['nav']))
     jobs = '\n'.join(
         f'<li class="job"><div class="entry-heading"><h3>{company}</h3>'
         f'<span class="date">{date}</span></div><p class="role">{role}</p>'
@@ -238,6 +269,16 @@ def render(lang, c):
         f'<li class="education-item"><div class="entry-heading"><h3>{school}</h3>'
         f'<span class="date">{date}</span></div><p>{degree}</p></li>'
         for date, school, degree in c['edu'])
+    talk_items = []
+    for year, title, event in c['talks']:
+        links = []
+        for kind, link_url in CONFERENCE_LINKS[year]:
+            label = escape(c['talk_links'][kind])
+            links.append(f'<a href="{escape(link_url)}" hreflang="ru" aria-label="{label} · {year}">{label}</a>')
+        talk_items.append(
+            f'<li class="conference-talk"><h3>{escape(title)}</h3><p>{escape(event)}</p>'
+            f'<div class="talk-links">{"".join(links)}</div></li>')
+    talks = '\n'.join(talk_items)
     registration_items = []
     fips_label = escape(c['fips_link'])
     for title, metadata, credit, document in c['registrations']:
@@ -314,6 +355,13 @@ def render(lang, c):
 <h2 id="education-title">{c['education_title']}</h2>
 <ul class="entries education">
 {education}
+</ul>
+</section>
+<section id="talks" aria-labelledby="talks-title">
+<h2 id="talks-title">{c['talks_title']}</h2>
+<p class="talks-credit">{escape(c['talks_credit'])}</p>
+<ul class="entries">
+{talks}
 </ul>
 </section>
 <section id="registrations" aria-labelledby="registrations-title">

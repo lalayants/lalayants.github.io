@@ -46,6 +46,11 @@ main > section:last-child { margin-bottom: 0; }
 .role { color: var(--muted); font-size: 14px; margin-bottom: 9px; }
 .education-item + .education-item { margin-top: 22px; }
 .education-item p { color: var(--muted); font-size: 14px; margin-top: 3px; }
+.talks-credit { margin-bottom: 18px; }
+.talks-credit, .conference-talk p { color: var(--muted); font-size: 14px; }
+.conference-talk p { margin-top: 3px; }
+.conference-talk + .conference-talk { margin-top: 22px; }
+.talk-links { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 7px; font-size: 14px; }
 .notes { list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; }
 .notes li > a, .note-title { display: block; font-weight: 500; }
 .notes li > span:last-child { display: block; color: var(--muted); font-size: 14px; margin-top: 3px; }
@@ -82,7 +87,7 @@ footer a { color: var(--muted); text-decoration: none; }
   h2 { font-size: 16px; margin-bottom: 16px; }
   h3 { font-size: 13px; }
   main > section { padding-bottom: 18px; margin-bottom: 20px; }
-  .job, .education-item { break-inside: avoid; }
+  .job, .education-item, .conference-talk { break-inside: avoid; }
 }
 
 .registration + .registration { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line); }
