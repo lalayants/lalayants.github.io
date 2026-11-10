@@ -5,6 +5,11 @@ import json
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = "https://lalayants.github.io"
+FIPS_REGISTRY = "https://www.fips.ru/registers-doc-view/fips_servlet"
+REGISTRATION_DOCUMENTS = {
+    'patent': ('2851523', 'RUPAT'),
+    'software': ('2023686859', 'EVM'),
+}
 CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'other': 'EN',
         'other_lang': 'en',
@@ -74,16 +79,17 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'recognition': 'Другие проекты и достижения',
         'contact_title': 'Контакты',
         'registrations_title': 'Патент и свидетельство о регистрации ПО',
+        'fips_link': 'Карточка ФИПС',
         'registrations': [('Способ получения сигнала с оценками параметров синхронного двигателя с '
                            'постоянными магнитами',
                            'Патент РФ № 2851523 · 25 ноября 2025 года',
                            'Соавтор. Патентообладатель — АО «Диаконт».',
-                           '/assets/documents/patent-2851523.pdf'),
+                           'patent'),
                           ('Полетный контроллер для управления квадрокоптером на базе программного пакета '
                            'mavros',
                            'Свидетельство о регистрации программы для ЭВМ № 2023686859 · 8 декабря 2023 года',
                            'Соавтор. Правообладатель — Университет ИТМО.',
-                           '/assets/documents/software-2023686859.pdf')],
+                           'software')],
         'institutions': 'РЭШ · Сколтех · ИТМО',
         'skills_title': 'Навыки',
         'skills': [('ML & Deep Learning',
@@ -173,15 +179,16 @@ CONTENT = {'ru': {'name': 'Кирилл Лалаянц',
         'recognition': 'Contributions & achievements',
         'contact_title': 'Contact',
         'registrations_title': 'Patent & software registration',
+        'fips_link': 'FIPS record',
         'registrations': [('Method for obtaining a signal with parameter estimates of a permanent-magnet '
                            'synchronous motor',
                            'Russian patent No. 2851523 · 25 November 2025',
                            'Co-inventor. Patent holder: Diakont JSC.',
-                           '/assets/documents/patent-2851523.pdf'),
+                           'patent'),
                           ('Quadcopter flight controller based on the mavros software package',
                            'Software registration No. 2023686859 · 8 December 2023',
                            'Co-author. Rights holder: ITMO University.',
-                           '/assets/documents/software-2023686859.pdf')],
+                           'software')],
         'institutions': 'NES · Skoltech · ITMO',
         'skills_title': 'Skills',
         'skills': [('ML & Deep Learning',
@@ -231,11 +238,22 @@ def render(lang, c):
         f'<li class="education-item"><div class="entry-heading"><h3>{school}</h3>'
         f'<span class="date">{date}</span></div><p>{degree}</p></li>'
         for date, school, degree in c['edu'])
-    registrations = '\n'.join(
-        f'<li class="registration"><h3><a href="{path}">{escape(title)}</a></h3>'
-        f'<p class="registration-meta">{escape(metadata)} · PDF</p>'
-        f'<p class="registration-credit">{escape(credit)}</p></li>'
-        for title, metadata, credit, path in c['registrations'])
+    registration_items = []
+    fips_label = escape(c['fips_link'])
+    for title, metadata, credit, document in c['registrations']:
+        number, database = REGISTRATION_DOCUMENTS[document]
+        registry_url = f'{FIPS_REGISTRY}?DB={database}&DocNumber={number}&TypeFile=html'
+        pdf_path = f'/assets/documents/{document}-{number}.pdf'
+        registration_items.append(
+            f'<li class="registration"><h3>{escape(title)}</h3>'
+            f'<p class="registration-meta">{escape(metadata)}</p>'
+            f'<p class="registration-credit">{escape(credit)}</p>'
+            '<div class="registration-links">'
+            f'<a class="registry-link" href="{escape(registry_url)}" aria-label="{fips_label} · {number}">'
+            f'{fips_label} <span aria-hidden="true">↗</span></a>'
+            f'<a href="{pdf_path}" aria-label="PDF · {number}">PDF</a>'
+            '</div></li>')
+    registrations = '\n'.join(registration_items)
     skills = ''.join(f'<div><dt>{escape(label)}</dt><dd>{escape(items)}</dd></div>'
                      for label, items in c['skills'])
     return f'''<!doctype html>
